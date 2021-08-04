@@ -1,30 +1,22 @@
-# This plug-in is disabled for coc.nvim ----
-# # Dark powered asynchronous completion framework for neovim/Vim8
+# TODO: change enable and configure
+# # Dark powered snippets provider
 # [[plugins]]
-# repo = 'shougo/deoplete.nvim'
+# repo = 'Shougo/deoppet.nvim'
+# depends = ['neosnippet-snippets', 'context_filetype.vim']
 # on_event = 'InsertEnter'
+# if = 'has("nvim")'
 # hook_source = '''
-#   call deoplete#enable()
+#   call deoppet#initialize()
+#   call deoppet#custom#option('snippets',
+#   \ map(globpath(&runtimepath, 'neosnippets', 1, 1),
+#   \     { _, val -> { 'path': val } }))
+# 
+#   imap <C-k>  <Plug>(deoppet_expand)
+#   imap <C-f>  <Plug>(deoppet_jump_forward)
+#   imap <C-b>  <Plug>(deoppet_jump_backward)
+#   smap <C-f>  <Plug>(deoppet_jump_forward)
+#   smap <C-b>  <Plug>(deoppet_jump_backward)
 # '''
-
-# Dark powered snippets provider
-[[plugins]]
-repo = 'Shougo/deoppet.nvim'
-depends = ['neosnippet-snippets', 'context_filetype.vim']
-on_event = 'InsertEnter'
-if = 'has("nvim")'
-hook_source = '''
-  call deoppet#initialize()
-  call deoppet#custom#option('snippets',
-  \ map(globpath(&runtimepath, 'neosnippets', 1, 1),
-  \     { _, val -> { 'path': val } }))
-
-  imap <C-k>  <Plug>(deoppet_expand)
-  imap <C-f>  <Plug>(deoppet_jump_forward)
-  imap <C-b>  <Plug>(deoppet_jump_backward)
-  smap <C-f>  <Plug>(deoppet_jump_forward)
-  smap <C-b>  <Plug>(deoppet_jump_backward)
-'''
 
 # The standard snippets repository for neosnippet/deoppet
 [[plugins]]
@@ -33,25 +25,34 @@ repo = 'Shougo/neosnippet-snippets'
 [[plugins]]
 repo = 'Shougo/context_filetype.vim'
 
-# [[plugins]]
-# repo = 'easymotion/vim-easymotion'
-# on_map = ['<Plug>(easymotion-']
-# hook_add = '''
-# " <Leader>f{char} to move to {char}
-# map  <Leader>f <Plug>(easymotion-bd-f)
-# nmap <Leader>f <Plug>(easymotion-overwin-f)
-# 
-# " s{char}{char} to move to {char}{char}
-# nmap <Leader>s <Plug>(easymotion-overwin-f2)
-# 
-# " Move to line
-# map <Leader>L <Plug>(easymotion-bd-jk)
-# nmap <Leader>L <Plug>(easymotion-overwin-line)
-# 
-# " Move to word
-# map  <Leader>w <Plug>(easymotion-bd-w)
-# nmap <Leader>w <Plug>(easymotion-overwin-w)
-# '''
+# Vim motion on speed
+[[plugins]]
+repo = 'easymotion/vim-easymotion'
+on_map = ['<Plug>(easymotion-']
+hook_add = '''
+" <Leader>f{char} to move to {char}
+map  <Leader>f <Plug>(easymotion-bd-f)
+nmap <Leader>f <Plug>(easymotion-overwin-f)
+
+" s{char}{char} to move to {char}{char}
+nmap <Leader>s <Plug>(easymotion-overwin-f2)
+
+" Move to line
+map <Leader>L <Plug>(easymotion-bd-jk)
+nmap <Leader>L <Plug>(easymotion-overwin-line)
+
+" Move to word
+map  <Leader>w <Plug>(easymotion-bd-w)
+nmap <Leader>w <Plug>(easymotion-overwin-w)
+'''
+
+# Git
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
+# cheat sheet
+[[plugins]]
+repo = 'reireias/vim-cheatsheet'
 
 # Tool for comment out
 [[plugins]]

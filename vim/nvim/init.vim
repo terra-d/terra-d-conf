@@ -3,6 +3,10 @@ if &compatible
   set nocompatible
 endif
 
+" leader
+nnoremap <Space> <nop>
+let g:mapleader = "\<Space>"
+
 " variable settings _/_/_/_/_/_/_/_/
 " get the file path of configrations
 let s:base_dir = expand('<sfile>:p:h') 

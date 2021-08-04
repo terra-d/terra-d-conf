@@ -1,7 +1,3 @@
-" leader
-nnoremap <Space> <nop>
-let mapleader = "\<Space>"
-
 " Easy escape.
 inoremap jj <ESC>
 cnoremap <expr> j
