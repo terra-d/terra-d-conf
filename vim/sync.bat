@@ -45,7 +45,11 @@ rem =========================
 :execimport
 copy .vimrc %HOME_DIR%\_vimrc
 copy /Y sync.bat %CONFIG_DIR%\
-xcopy /Y nvim %CONFIG_DIR%\
+copy /Y /E nvim\coc-settings.json %WORK_DIR%\vim\nvim\
+copy /Y /E nvim\ginit.vim %WORK_DIR%\vim\nvim\
+copy /Y /E nvim\init.vim %WORK_DIR%\vim\nvim\
+xcopy /Y nvim\colors %WORK_DIR%\vim\nvim\colors
+xcopy /Y /E nvim\rc %WORK_DIR%\vim\nvim\rc
 
 echo Done.
 goto :exitlabel
