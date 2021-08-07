@@ -44,13 +44,13 @@ goto :execexport
 rem =========================
 :execimport
 copy .vimrc %HOME_DIR%\_vimrc
-copy /Y sync.bat %CONFIG_DIR%\
-copy /Y /E nvim\coc-settings.json %CONFIG_DIR%\nvim\
-copy /Y /E nvim\ginit.vim %CONFIG_DIR%\nvim\
-copy /Y /E nvim\init.vim %CONFIG_DIR%\nvim\
-copy /Y /E nvim\cheatsheet.md %CONFIG_DIR%\nvim\
-xcopy /Y nvim\colors %CONFIG_DIR%\nvim\colors
-xcopy /Y /E nvim\rc %CONFIG_DIR%\nvim\rc
+copy /Y sync.bat %CONFIG_DIR%
+copy /Y nvim\coc-settings.json %CONFIG_DIR%
+copy /Y nvim\ginit.vim %CONFIG_DIR%
+copy /Y nvim\init.vim %CONFIG_DIR%
+copy /Y nvim\cheatsheet.md %CONFIG_DIR%
+xcopy /Y /E nvim\colors %CONFIG_DIR%\colors
+xcopy /Y /E nvim\rc %CONFIG_DIR%\rc
 
 echo Done.
 goto :exitlabel
