@@ -17,7 +17,7 @@ if match(&runtimepath, 'dein.vim')
 endif
  
 " Load configrations
-let g:dein#inline_vimrcs = [g:base_dir.'/mappings.vim']
+let g:dein#inline_vimrcs = [g:rc_dir.'/mappings.rc.vim']
 
 " Required:
 if dein#load_state(s:dein_cashe_dir)

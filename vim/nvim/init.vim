@@ -4,17 +4,17 @@ if &compatible
 endif
 
 let g:base_dir = expand('<sfile>:p:h') 
-let s:rc_dir = g:base_dir.'/rc'
+let g:rc_dir = g:base_dir.'/rc'
 execute 'set runtimepath^='.g:base_dir
 
 " initial settings
 if has('vim_starting')
-  execute 'source' s:rc_dir.'/init.rc.vim'
+  execute 'source' g:rc_dir.'/init.rc.vim'
 endif
 
 " dein.vim settings
-execute 'source' s:rc_dir.'/dein.rc.vim'
+execute 'source' g:rc_dir.'/dein.rc.vim'
 
 " editor settings
-execute 'source' s:rc_dir.'/editor.rc.vim'
+execute 'source' g:rc_dir.'/editor.rc.vim'
 
