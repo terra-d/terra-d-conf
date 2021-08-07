@@ -53,6 +53,9 @@ repo = 'tpope/vim-fugitive'
 # cheat sheet
 [[plugins]]
 repo = 'reireias/vim-cheatsheet'
+hook_add = '''
+  let g:cheatsheet#cheat_file = '~/.config/nvim/cheatsheet.md'
+'''
 
 # Tool for comment out
 [[plugins]]

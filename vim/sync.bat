@@ -45,11 +45,12 @@ rem =========================
 :execimport
 copy .vimrc %HOME_DIR%\_vimrc
 copy /Y sync.bat %CONFIG_DIR%\
-copy /Y /E nvim\coc-settings.json %WORK_DIR%\vim\nvim\
-copy /Y /E nvim\ginit.vim %WORK_DIR%\vim\nvim\
-copy /Y /E nvim\init.vim %WORK_DIR%\vim\nvim\
-xcopy /Y nvim\colors %WORK_DIR%\vim\nvim\colors
-xcopy /Y /E nvim\rc %WORK_DIR%\vim\nvim\rc
+copy /Y /E nvim\coc-settings.json %CONFIG_DIR%\nvim\
+copy /Y /E nvim\ginit.vim %CONFIG_DIR%\nvim\
+copy /Y /E nvim\init.vim %CONFIG_DIR%\nvim\
+copy /Y /E nvim\cheatsheet.md %CONFIG_DIR%\nvim\
+xcopy /Y nvim\colors %CONFIG_DIR%\nvim\colors
+xcopy /Y /E nvim\rc %CONFIG_DIR%\nvim\rc
 
 echo Done.
 goto :exitlabel
@@ -65,6 +66,7 @@ copy deinlazy.toml %WORK_DIR%\vim\nvim\
 copy ginit.vim %WORK_DIR%\vim\nvim\
 copy init.vim %WORK_DIR%\vim\nvim\
 copy mappings.vim %WORK_DIR%\vim\nvim\
+copy cheatsheet.md %WORK_DIR%\vim\nvim\
 xcopy /Y colors %WORK_DIR%\vim\nvim\colors
 xcopy /Y /E rc %WORK_DIR%\vim\nvim\rc
 
