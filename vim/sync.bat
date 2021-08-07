@@ -3,7 +3,7 @@
 rem ==== Global Variables ====
 set CURRENT_DIR=%CD%
 set HOME_DIR=%homedrive%%homepath%
-set CONFIG_DIR=%HOME_DIR%\AppData\Local\nvim
+set CONFIG_DIR=%HOME_DIR%\.config\nvim
 set REPO=https://github.com/terra-9/settings.git
 set WORK_DIR=tmp
 rem ==========================
@@ -16,7 +16,7 @@ echo %CURRENT_DIR%
 echo %CONFIG_DIR%
 echo %REPO%
 
-rem If the directory where this batch is executed is ~/Appdata/Local/nvim,
+rem If the directory where this batch is executed is ~/.config/nvim,
 rem then push config files to the repository.
 if %CURRENT_DIR%==%CONFIG_DIR% (
   goto :confirmexport
@@ -62,7 +62,7 @@ copy ginit.vim %WORK_DIR%\vim\nvim\
 copy init.vim %WORK_DIR%\vim\nvim\
 copy mappings.vim %WORK_DIR%\vim\nvim\
 xcopy /Y colors %WORK_DIR%\vim\nvim\colors
-xcopy /Y rc %WORK_DIR%\vim\nvim\rc
+xcopy /Y /E rc %WORK_DIR%\vim\nvim\rc
 
 echo Done.
 cd %WORK_DIR%
