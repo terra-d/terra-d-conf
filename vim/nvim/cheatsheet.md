@@ -12,3 +12,14 @@
 
 * `jj`: Exit from insert mode
 * `j<Space>`: insert "j"
+
+## Mappings for plugins
+
+### hop.nvim
+
+Neovim motions on speed.
+
+* `<leader>w`: Word mode
+* `<leader>f`: 1-char mode
+* `<leader>s`: 2-char mode
+* `<leader>/`: Pattern mode
