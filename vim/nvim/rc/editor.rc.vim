@@ -7,6 +7,7 @@ set autoindent
 set tabstop=2
 set shiftwidth=2
 set expandtab " white space
+set smartcase " search rule
 set splitright
 set hls
 
