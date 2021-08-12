@@ -23,3 +23,20 @@ Neovim motions on speed.
 * `<leader>f`: 1-char mode
 * `<leader>s`: 2-char mode
 * `<leader>/`: Pattern mode
+
+### denite.nvim
+
+A Dark powered plugin for Neovim/Vim to unite all interfaces.
+
+#### In normal mode
+
+* `<leader><leader>w`: browse files
+
+#### In denite buffer
+
+* `e`: open a file
+* `p`: preview a file
+* `s`: split a file
+* `v`: split a file vertically
+* `t`: open a file with new tab
+* `q`: close a dein buffer

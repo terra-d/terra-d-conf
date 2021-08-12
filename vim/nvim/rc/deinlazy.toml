@@ -44,13 +44,10 @@ hook_add = '''
   map  <Leader>/ <cmd>HopPattern<cr>
 '''
 
-# Git
-[[plugins]]
-repo = 'tpope/vim-fugitive'
-
 # cheat sheet
 [[plugins]]
 repo = 'reireias/vim-cheatsheet'
+on_cmd = 'Cheat'
 hook_add = '''
   let g:cheatsheet#cheat_file = '~/.config/nvim/cheatsheet.md'
 '''
@@ -64,4 +61,8 @@ repo = 'tpope/vim-commentary'
 repo = 'posva/vim-vue'
 on_ft = ['vue']
 
+# Rust plugin
+[[plugins]]
+on_ft = 'rust'
+repo = 'rust-lang/rust.vim'
 
