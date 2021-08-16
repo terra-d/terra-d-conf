@@ -8,7 +8,7 @@ colorscheme solarized_nvimqt
 
 if has("unix")
   set shell=zsh
-elseif has("win64")
+elseif has("win64") || has("win32")
   set shell=pwsh.exe
 endif
 
