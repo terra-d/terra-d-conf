@@ -1,0 +1,68 @@
+# TODO: change enable and configure
+# # Dark powered snippets provider
+# [[plugins]]
+# repo = 'Shougo/deoppet.nvim'
+# depends = ['neosnippet-snippets', 'context_filetype.vim']
+# on_event = 'InsertEnter'
+# if = 'has("nvim")'
+# hook_source = '''
+#   call deoppet#initialize()
+#   call deoppet#custom#option('snippets',
+#   \ map(globpath(&runtimepath, 'neosnippets', 1, 1),
+#   \     { _, val -> { 'path': val } }))
+# 
+#   imap <C-k>  <Plug>(deoppet_expand)
+#   imap <C-f>  <Plug>(deoppet_jump_forward)
+#   imap <C-b>  <Plug>(deoppet_jump_backward)
+#   smap <C-f>  <Plug>(deoppet_jump_forward)
+#   smap <C-b>  <Plug>(deoppet_jump_backward)
+# '''
+
+# The standard snippets repository for neosnippet/deoppet
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+
+[[plugins]]
+repo = 'Shougo/context_filetype.vim'
+
+# Vim motion on speed (This plugin doesn't conflict with lints)
+# TODO: configure to move accross windows
+[[plugins]]
+repo = 'phaazon/hop.nvim'
+# on_map = ['<Plug>(easymotion-']
+hook_add = '''
+  " <Leader>f{char} to move to {char}
+  map <Leader>f <cmd>HopChar1<cr>
+  "nmap <Leader>f <Plug>(easymotion-overwin-f)
+  " s{char}{char} to move to {char}{char}
+  nmap <Leader>s <cmd>HopChar2<cr>
+  " Move to line
+  map <Leader>L <cmd>HopLine<cr>
+  " Move to word
+  map  <Leader>w <cmd>HopWord<cr>
+  "Pattern mode
+  map  <Leader>/ <cmd>HopPattern<cr>
+'''
+
+# cheat sheet
+[[plugins]]
+repo = 'reireias/vim-cheatsheet'
+on_cmd = 'Cheat'
+hook_add = '''
+  let g:cheatsheet#cheat_file = '~/.config/nvim/cheatsheet.md'
+'''
+
+# Tool for comment out
+[[plugins]]
+repo = 'tpope/vim-commentary'
+
+# Syntax highlinting for Vue components
+[[plugins]]
+repo = 'posva/vim-vue'
+on_ft = ['vue']
+
+# Rust plugin
+[[plugins]]
+on_ft = 'rust'
+repo = 'rust-lang/rust.vim'
+
