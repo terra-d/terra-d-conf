@@ -4,7 +4,7 @@ rem ==== Global Variables ====
 set CURRENT_DIR=%CD%
 set HOME_DIR=%homedrive%%homepath%
 set CONFIG_DIR=%HOME_DIR%\.config\nvim
-set REPO=https://github.com/terra-9/settings.git
+set REPO=https://github.com/terra-d/settings.git
 set WORK_DIR=tmp
 rem ==========================
 
