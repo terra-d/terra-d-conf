@@ -1,15 +1,9 @@
 " NOTE: Do NOT use combine oparator '|' to work with VSCode
 
 " Up/down/left/right {{{
-  nnoremap n j
-  xnoremap n j
-  onoremap n j
-  nnoremap e k
-  xnoremap e k
-  onoremap e k
-  nnoremap i l
-  xnoremap i l
-  onoremap i l
+  nnoremap n j | xnoremap n j | onoremap n j
+  nnoremap e k | xnoremap e k | onoremap e k
+  nnoremap i l | xnoremap i l | onoremap i l
 " }}}
 
 "" Words forward/backward {{{
@@ -69,11 +63,8 @@
 "    nnoremap P T|xnoremap P T|onoremap P T|
 "    nnoremap b ;|xnoremap b ;|onoremap b ;|
 "    nnoremap B ,|xnoremap B ,|onoremap B ,|
-  nnoremap k n
-  xnoremap k n
-  onoremap k n
-  nnoremap K N
-  xnoremap K N
+  nnoremap k n | xnoremap k n | onoremap k n
+  nnoremap K N | xnoremap K N
 " }}}
 
 "" inneR text objects {{{
@@ -91,14 +82,9 @@
 "" }}}
 
 " Window handling {{{
-  nnoremap <C-W>h <C-W>h
-  xnoremap <C-W>h <C-W>u
-  nnoremap <C-W>n <C-W>j
-  xnoremap <C-W>n <C-W>u
-  nnoremap <C-W>e <C-W>k
-  xnoremap <C-W>e <C-W>u
-  nnoremap <C-W>i <C-W>l
-  xnoremap <C-W>i <C-W>u
+  nnoremap <C-W>n <C-W>j | xnoremap <C-W>n <C-W>j
+  nnoremap <C-W>e <C-W>k | xnoremap <C-W>e <C-W>k
+  nnoremap <C-W>i <C-W>l | xnoremap <C-W>i <C-W>l
 " }}}
 
 " Easy escape {{{
