@@ -64,7 +64,7 @@
 "    nnoremap b ;|xnoremap b ;|onoremap b ;|
 "    nnoremap B ,|xnoremap B ,|onoremap B ,|
   nnoremap k n | xnoremap k n | onoremap k n
-  nnoremap K N | xnoremap K N
+  nnoremap K N | xnoremap K N | onoremap K N
 " }}}
 
 "" inneR text objects {{{
