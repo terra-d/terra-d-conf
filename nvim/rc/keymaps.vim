@@ -14,44 +14,24 @@ nnoremap O E|xnoremap O E|onoremap O E
 "    cnoremap <C-L> <C-Left>
 "    cnoremap <C-Y> <C-Right>
 
-" inSert/Replace/append
+" Insert/Replace/append
 nnoremap s i|nnoremap S I
-nnoremap h o|nnoremap h O
-"    nnoremap t a|
-"    nnoremap T A|
+nnoremap t a|nnoremap T A
+nnoremap h o|nnoremap H O
 
-"" Change {{{
-"    nnoremap w c|xnoremap w c|
-"    nnoremap W C|xnoremap W C|
-"    nnoremap ww cc|
-"" }}}
-"" Cut/copy/paste {{{
-"    nnoremap x x|xnoremap x d|
-"    nnoremap c y|xnoremap c y|
-"    nnoremap v p|xnoremap v p|
-"    nnoremap X dd|xnoremap X d|
-"    nnoremap C yy|xnoremap C y|
-"    nnoremap V P|xnoremap V P|
-"    nnoremap gv gp|xnoremap gv gp|
-"    nnoremap gV gP|xnoremap gV gP|
-"" }}}
+" Change
+nnoremap w c|xnoremap w c
+nnoremap W C|xnoremap W C
+nnoremap ww cc
 
 " Undo/redo
 nnoremap z u|xnoremap z :<C-U>undo<CR>
 nnoremap gz U|xnoremap gz :<C-U>undo<CR>
 nnoremap Z <C-R>|xnoremap Z :<C-U>redo<CR>
 
-
-"" Visual mode {{{
-"    nnoremap a v|xnoremap a v|
-"    nnoremap A V|xnoremap A V|
-"    nnoremap ga gv
-"    " Make insert/add work also in visual line mode like in visual block mode
-"    xnoremap <silent> <expr> s (mode() =~# "[V]" ? "\<C-V>0o$I" : "I")
-"    xnoremap <silent> <expr> S (mode() =~# "[V]" ? "\<C-V>0o$I" : "I")
-"    xnoremap <silent> <expr> t (mode() =~# "[V]" ? "\<C-V>0o$A" : "A")
-"    xnoremap <silent> <expr> T (mode() =~# "[V]" ? "\<C-V>0o$A" : "A")
-"" }}}
+" Visual mode {{{
+nnoremap a v|xnoremap a v
+nnoremap A V|xnoremap A V
 
 " Search
 "    " f/F are unchanged
@@ -91,7 +71,8 @@ nnoremap K N| xnoremap K N| onoremap K N
   nnoremap E J
 " }}}
 
-" copy and paste
+" copy, cut and paste
+xnoremap x d
 nnoremap c y|xnoremap c y
 nnoremap cc yy
 nnoremap C y$|xnoremap C y
