@@ -4,6 +4,12 @@ nnoremap e j|xnoremap e j|onoremap e j
 nnoremap n h|xnoremap n h|onoremap n h
 nnoremap i l|xnoremap i l|onoremap i l
 
+" Window handling
+nnoremap <C-W>u <C-W>k| xnoremap <C-W>u <C-W>k
+nnoremap <C-W>e <C-W>j| xnoremap <C-W>e <C-W>j
+nnoremap <C-W>n <C-W>h| xnoremap <C-W>n <C-W>h
+nnoremap <C-W>i <C-W>l| xnoremap <C-W>i <C-W>l
+
 " Words forward/backward
 nnoremap l b|xnoremap l b|onoremap l b
 nnoremap L B|xnoremap L B|onoremap L B
@@ -55,12 +61,6 @@ nnoremap K N| xnoremap K N| onoremap K N
 "    nnoremap gK K|xnoremap gK K|
 "    nnoremap gL L|xnoremap gL L|
 "" }}}
-
-" Window handling {{{
-  nnoremap <C-W>n <C-W>j| xnoremap <C-W>n <C-W>j
-  nnoremap <C-W>e <C-W>k| xnoremap <C-W>e <C-W>k
-  nnoremap <C-W>i <C-W>l| xnoremap <C-W>i <C-W>l
-" }}}
 
 " Easy escape {{{
   inoremap jj <ESC>
