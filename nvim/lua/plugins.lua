@@ -1,4 +1,13 @@
 return {
+  -- A highly customizable theme for vim and neovim
+  {
+    "EdenEast/nightfox.nvim",
+    config = function()
+      require("nightfox").setup()
+      vim.cmd("colorscheme nightfox")
+    end,
+  },
+  -- Showing indent lines
   {
     "lukas-reineke/indent-blankline.nvim",
     config = require("plugin-settings.indent-blankline"),
