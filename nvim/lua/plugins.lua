@@ -1,4 +1,8 @@
 return {
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    config = require("plugin-settings.indent-blankline"),
+  },
   -- Portable package manager to install LSP & DAP servers,
   -- linters and formatters
   {
