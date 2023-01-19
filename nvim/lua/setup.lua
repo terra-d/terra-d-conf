@@ -19,7 +19,7 @@ if not vim.g.vscode then
   local plugins = require("plugins")
   require("lazy").setup(plugins, {
       root  = vim.fn.stdpath("data") .. "/lazy",
-      lockfile = "../lazy-lock.json",
+      lockfile = "./lazy-lock.json",
       install = {
           missing = true,
           colorscheme = {
