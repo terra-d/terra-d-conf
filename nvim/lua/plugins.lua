@@ -12,6 +12,14 @@ return {
     "lukas-reineke/indent-blankline.nvim",
     config = require("plugin-settings.indent-blankline"),
   },
+  -- Easymotion
+  {
+    "phaazon/hop.nvim",
+    branch = "v2",
+    config = function()
+      require("plugin-settings.hop").setup()
+    end,
+  },
   -- Portable package manager to install LSP & DAP servers,
   -- linters and formatters
   {
