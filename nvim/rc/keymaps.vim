@@ -78,7 +78,7 @@ nnoremap cc yy
 nnoremap C y$|xnoremap C y
 nnoremap v p|xnoremap v p
 nnoremap V P|xnoremap V P
-nnoremap <leader>c "+y
+nnoremap <leader>c "+y|xnoremap <leader>c "+y
 nnoremap <leader>C "+y$
 nnoremap <leader>v "+p
 nnoremap <leader>v "+P
