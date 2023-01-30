@@ -13,7 +13,7 @@ return {
     dependencies = {
       "nvim-treesitter/nvim-treesitter",
     },
-    config = require("plugin-settings.indent-blankline"),
+    opts = require("plugin-settings.indent-blankline"),
   },
   -- Easymotion
   {
@@ -40,6 +40,6 @@ return {
   {
     "nvim-tree/nvim-tree.lua",
     dependencies = {"nvim-tree/nvim-web-devicons"},
-    config = require("plugin-settings.nvim-tree"),
+    opts = require("plugin-settings.nvim-tree"),
   },
 }
