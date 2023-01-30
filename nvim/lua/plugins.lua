@@ -40,6 +40,8 @@ return {
   {
     "nvim-tree/nvim-tree.lua",
     dependencies = {"nvim-tree/nvim-web-devicons"},
-    opts = require("plugin-settings.nvim-tree"),
+    config = function()
+      require("plugin-settings.nvim-tree").setup()
+    end,
   },
 }
