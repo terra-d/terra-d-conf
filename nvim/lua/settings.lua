@@ -1,14 +1,10 @@
 local opt = vim.opt
 
--- Leader
-vim.g.mapleader = ","
-
 -- No compatible
 opt.compatible = false
 
 -- Set color scheme
 opt.background = "dark"
-vim.cmd[[colorscheme solarized]]
 
 -- Syntax highlighting
 opt.syntax = "on"

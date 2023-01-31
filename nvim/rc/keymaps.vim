@@ -1,3 +1,5 @@
+let g:mapleader = ","
+
 " Up/down/left/right
 nnoremap u k|xnoremap u k|onoremap u k
 nnoremap e j|xnoremap e j|onoremap e j
