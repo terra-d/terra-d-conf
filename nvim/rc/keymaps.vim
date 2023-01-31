@@ -1,24 +1,24 @@
 let g:mapleader = ","
 
 " Up/down/left/right
-nnoremap u k|xnoremap u k|onoremap u k
-nnoremap e j|xnoremap e j|onoremap e j
-nnoremap n h|xnoremap n h|onoremap n h
-nnoremap i l|xnoremap i l|onoremap i l
+nnoremap u k|xnoremap u k
+nnoremap e j|xnoremap e j
+nnoremap n h|xnoremap n h
+nnoremap i l|xnoremap i l
 
 " Window handling
-nnoremap <C-W>u <C-W>k| xnoremap <C-W>u <C-W>k
-nnoremap <C-W>e <C-W>j| xnoremap <C-W>e <C-W>j
-nnoremap <C-W>n <C-W>h| xnoremap <C-W>n <C-W>h
-nnoremap <C-W>i <C-W>l| xnoremap <C-W>i <C-W>l
+nnoremap <C-W>u <C-W>k|xnoremap <C-W>u <C-W>k
+nnoremap <C-W>e <C-W>j|xnoremap <C-W>e <C-W>j
+nnoremap <C-W>n <C-W>h|xnoremap <C-W>n <C-W>h
+nnoremap <C-W>i <C-W>l|xnoremap <C-W>i <C-W>l
 
 " Words forward/backward
-nnoremap l b|xnoremap l b|onoremap l b
-nnoremap L B|xnoremap L B|onoremap L B
-nnoremap y w|xnoremap y w|onoremap y w
-nnoremap Y W|xnoremap Y W|onoremap Y W
-nnoremap o e|xnoremap o e|onoremap o e
-nnoremap O E|xnoremap O E|onoremap O E
+nnoremap l b|xnoremap l b
+nnoremap L B|xnoremap L B
+nnoremap y w|xnoremap y w
+nnoremap Y W|xnoremap Y W
+nnoremap o e|xnoremap o e
+nnoremap O E|xnoremap O E
 "    cnoremap <C-L> <C-Left>
 "    cnoremap <C-Y> <C-Right>
 
@@ -43,12 +43,12 @@ nnoremap A V|xnoremap A V
 
 " Search
 "    " f/F are unchanged
-"    nnoremap p t|xnoremap p t|onoremap p t|
-"    nnoremap P T|xnoremap P T|onoremap P T|
-"    nnoremap b ;|xnoremap b ;|onoremap b ;|
-"    nnoremap B ,|xnoremap B ,|onoremap B ,|
-nnoremap k n| xnoremap k n| onoremap k n
-nnoremap K N| xnoremap K N| onoremap K N
+"    nnoremap p t|xnoremap p t
+"    nnoremap P T|xnoremap P T
+"    nnoremap b ;|xnoremap b ;
+"    nnoremap B ,|xnoremap B ,
+nnoremap k n| xnoremap k n
+nnoremap K N| xnoremap K N
 
 "" inneR text objects {{{
 "    " E.g. dip (delete inner paragraph) is now drp
