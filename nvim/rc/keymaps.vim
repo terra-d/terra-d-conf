@@ -25,7 +25,7 @@ nnoremap O E|xnoremap O E
 " Insert/Replace/append
 nnoremap s i|nnoremap S I
 nnoremap t a|nnoremap T A
-nnoremap h o|nnoremap H O
+nnoremap p o|nnoremap P O
 
 " Change
 nnoremap w c|xnoremap w c
