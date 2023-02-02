@@ -28,7 +28,9 @@ return {
   {
     "williamboman/mason.nvim",
     dependencies = {
+      "nvim-lua/plenary.nvim",
       "williamboman/mason-lspconfig.nvim",
+      "jose-elias-alvarez/null-ls.nvim",
       "jayp0521/mason-null-ls.nvim",
       "neovim/nvim-lspconfig",
     },
