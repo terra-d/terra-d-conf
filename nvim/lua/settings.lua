@@ -18,7 +18,6 @@ opt.termguicolors = true
 
 -- Set hybrid line numbers
 opt.number = true
-opt.relativenumber = true
 
 -- Indantation
 opt.expandtab = true
