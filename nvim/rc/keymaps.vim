@@ -85,3 +85,6 @@ nnoremap <leader>c "+y|xnoremap <leader>c "+y
 nnoremap <leader>C "+y$
 nnoremap <leader>v "+p
 nnoremap <leader>v "+P
+
+" increment
+nnoremap <C-R> <C-A>
