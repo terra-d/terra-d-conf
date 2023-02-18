@@ -23,7 +23,7 @@ nnoremap O E|xnoremap O E
 "    cnoremap <C-Y> <C-Right>
 
 " Insert/Replace/append
-nnoremap s i|nnoremap S I
+nnoremap s i|nnoremap S I|xnoremap S I
 nnoremap t a|nnoremap T A
 nnoremap p o|nnoremap P O
 
@@ -40,6 +40,7 @@ nnoremap Z <C-R>|xnoremap Z :<C-U>redo<CR>
 " Visual mode {{{
 nnoremap a v|xnoremap a v
 nnoremap A V|xnoremap A V
+nnoremap <C-A> <C-V>|xnoremap <C-A> <C-V>
 
 " Search
 "    " f/F are unchanged
