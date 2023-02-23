@@ -19,8 +19,6 @@ nnoremap y w|xnoremap y w
 nnoremap Y W|xnoremap Y W
 nnoremap o e|xnoremap o e
 nnoremap O E|xnoremap O E
-"    cnoremap <C-L> <C-Left>
-"    cnoremap <C-Y> <C-Right>
 
 " Insert/Replace/append
 nnoremap s i|nnoremap S I|xnoremap S I
