@@ -1,4 +1,5 @@
 let g:mapleader = ","
+let b:is_vscode_neovim = exists('g:vscode')
 
 " Up/down/left/right
 nnoremap u k|xnoremap u k
@@ -7,10 +8,21 @@ nnoremap n h|xnoremap n h
 nnoremap i l|xnoremap i l
 
 " Window handling
-nnoremap <C-W>u <C-W>k|xnoremap <C-W>u <C-W>k
-nnoremap <C-W>e <C-W>j|xnoremap <C-W>e <C-W>j
-nnoremap <C-W>n <C-W>h|xnoremap <C-W>n <C-W>h
-nnoremap <C-W>i <C-W>l|xnoremap <C-W>i <C-W>l
+if b:is_vscode_neovim
+  nnoremap <C-w>u <Cmd>call VSCodeNotify('workbench.action.focusAboveGroup')<CR>
+  xnoremap <C-w>u <Cmd>call VSCodeNotify('workbench.action.focusAboveGroup')<CR>
+  nnoremap <C-w>e <Cmd>call VSCodeNotify('workbench.action.focusBelowGroup')<CR>
+  xnoremap <C-w>e <Cmd>call VSCodeNotify('workbench.action.focusBelowGroup')<CR>
+  nnoremap <C-w>n <Cmd>call VSCodeNotify('workbench.action.focusLeftGroup')<CR>
+  xnoremap <C-w>n <Cmd>call VSCodeNotify('workbench.action.focusLeftGroup')<CR>
+  nnoremap <C-w>i <Cmd>call VSCodeNotify('workbench.action.focusRightGroup')<CR>
+  xnoremap <C-w>i <Cmd>call VSCodeNotify('workbench.action.focusRightGroup')<CR
+else
+  nnoremap <C-W>u <C-W>k|xnoremap <C-W>u <C-W>k
+  nnoremap <C-W>e <C-W>j|xnoremap <C-W>e <C-W>j
+  nnoremap <C-W>n <C-W>h|xnoremap <C-W>n <C-W>h
+  nnoremap <C-W>i <C-W>l|xnoremap <C-W>i <C-W>l
+endif
 
 " Words forward/backward
 nnoremap l b|xnoremap l b
