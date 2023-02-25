@@ -1,7 +1,7 @@
 local M = {}
 
 local lsp_servers = {
-    sumneko_lua = {
+    lua_ls = {
         settings = {
             Lua = {
                 runtime = {
