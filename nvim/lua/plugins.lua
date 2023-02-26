@@ -40,10 +40,12 @@ return {
   },
   -- A File Explorer For Neovim Written In Lua
   {
-    "nvim-tree/nvim-tree.lua",
-    dependencies = {"nvim-tree/nvim-web-devicons"},
-    config = function()
-      require("plugin-settings.nvim-tree").setup()
-    end,
+    "nvim-neo-tree/neo-tree.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons",
+      "MunifTanjim/nui.nvim",
+    },
+    opts = require("plugin-settings.neo-tree"),
   },
 }
