@@ -48,4 +48,12 @@ return {
     },
     opts = require("plugin-settings.neo-tree"),
   },
+  -- highly extendable fuzzy finder over lists
+  {
+    'nvim-telescope/telescope.nvim', tag = '0.1.1',
+    dependencies = { 'nvim-lua/plenary.nvim' },
+    config = function()
+      require("plugin-settings.telescope").setup()
+    end,
+  }
 }
