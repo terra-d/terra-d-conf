@@ -16,7 +16,7 @@ if b:is_vscode_neovim
   nnoremap <C-w>n <Cmd>call VSCodeNotify('workbench.action.focusLeftGroup')<CR>
   xnoremap <C-w>n <Cmd>call VSCodeNotify('workbench.action.focusLeftGroup')<CR>
   nnoremap <C-w>i <Cmd>call VSCodeNotify('workbench.action.focusRightGroup')<CR>
-  xnoremap <C-w>i <Cmd>call VSCodeNotify('workbench.action.focusRightGroup')<CR
+  xnoremap <C-w>i <Cmd>call VSCodeNotify('workbench.action.focusRightGroup')<CR>
 else
   nnoremap <C-W>u <C-W>k|xnoremap <C-W>u <C-W>k
   nnoremap <C-W>e <C-W>j|xnoremap <C-W>e <C-W>j
@@ -31,6 +31,8 @@ nnoremap y w|xnoremap y w
 nnoremap Y W|xnoremap Y W
 nnoremap o e|xnoremap o e
 nnoremap O E|xnoremap O E
+nnoremap h ge|xnoremap h ge
+nnoremap H gE|xnoremap H gE
 
 " Insert/Replace/append
 nnoremap s i|nnoremap S I|xnoremap S I
@@ -40,7 +42,7 @@ nnoremap p o|nnoremap P O
 " Change
 nnoremap w c|xnoremap w c
 nnoremap W C|xnoremap W C
-nnoremap ww cc
+nnoremap ww cw
 
 " Undo/redo
 nnoremap z u|xnoremap z :<C-U>undo<CR>
