@@ -1,6 +1,5 @@
 local M = {}
 local map = require("utils").map
-local is_vscode_neovim = vim.g.vscode
 
 function M.setup()
   local builtin = require('telescope.builtin')
@@ -16,7 +15,7 @@ function M.setup()
     }
   })
 
-  if not is_vscode_neovim then
+  if not IS_VSCODE_NEOVIM then
     map("n", "<leader>p", builtin.find_files)
   end
 end

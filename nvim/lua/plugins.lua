@@ -46,7 +46,9 @@ return {
       "nvim-tree/nvim-web-devicons",
       "MunifTanjim/nui.nvim",
     },
-    opts = require("plugin-settings.neo-tree"),
+    config = function()
+      require("plugin-settings.neo-tree").setup()
+    end,
   },
   -- highly extendable fuzzy finder over lists
   {

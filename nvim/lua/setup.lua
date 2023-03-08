@@ -1,4 +1,5 @@
 -- load vim settings
+IS_VSCODE_NEOVIM = vim.g.vscode
 require("settings")
 
 -- set up the package manager

@@ -1,5 +1,8 @@
--- TODO: config key mappings
-return {
+local M = {}
+local map = require("utils").map
+
+function M.setup()
+  require("neo-tree").setup({
     window = {
         mappings = {
             ["e"] = "none",
@@ -7,4 +10,11 @@ return {
             ["v"] = "open_vsplit",
         }
     },
-}
+  })
+
+  if not IS_VSCODE_NEOVIM then
+    map("n", "<leader>E", "<cmd>:NeoTreeShow<CR>")
+  end
+end
+
+return M
