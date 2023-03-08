@@ -1,3 +1,4 @@
+-- TODO: make this plugin not work in vscode
 local M = {}
 local map = require("utils").map
 
@@ -10,6 +11,11 @@ function M.setup()
         n = {
           ["u"] = actions.move_selection_previous,
           ["e"] = actions.move_selection_next,
+          ["s"] = actions.select_horizontal,
+          ["v"] = actions.select_vertical,
+        },
+        i = {
+          ["<C-s>"] = actions.select_horizontal,
         }
       }
     }
