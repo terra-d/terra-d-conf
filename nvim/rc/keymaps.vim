@@ -67,14 +67,12 @@ xnoremap W C
 nnoremap ww cw
 
 " Undo/redo
-nnoremap z u
+nnoremap <nowait> z u
 xnoremap z :<C-U>undo<CR>
-unmap zz
 nnoremap gz U
 xnoremap gz :<C-U>undo<CR>
-nnoremap Z <C-R>
+nnoremap <nowait> Z <C-R>
 xnoremap Z :<C-U>redo<CR>
-unmap ZZ
 
 " Visual mode {{{
 nnoremap a v
