@@ -21,9 +21,7 @@ function M.setup()
     }
   })
 
-  if not IS_VSCODE_NEOVIM then
-    map("n", "<leader>p", builtin.find_files)
-  end
+  map("n", "<leader>p", builtin.find_files)
 end
 
 return M

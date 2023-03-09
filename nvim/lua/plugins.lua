@@ -2,6 +2,7 @@ return {
   -- A highly customizable theme for vim and neovim
   {
     "EdenEast/nightfox.nvim",
+    enabled = not(IS_VSCODE_NEOVIM),
     config = function()
       require("nightfox").setup()
       vim.cmd("colorscheme nightfox")
@@ -10,6 +11,7 @@ return {
   -- Showing indent lines
   {
     "lukas-reineke/indent-blankline.nvim",
+    enabled = not(IS_VSCODE_NEOVIM),
     dependencies = {
       "nvim-treesitter/nvim-treesitter",
     },
@@ -41,6 +43,7 @@ return {
   -- A File Explorer For Neovim Written In Lua
   {
     "nvim-neo-tree/neo-tree.nvim",
+    enabled = not(IS_VSCODE_NEOVIM),
     dependencies = {
       "nvim-lua/plenary.nvim",
       "nvim-tree/nvim-web-devicons",
@@ -53,6 +56,7 @@ return {
   -- highly extendable fuzzy finder over lists
   {
     'nvim-telescope/telescope.nvim', tag = '0.1.1',
+    enabled = not(IS_VSCODE_NEOVIM),
     dependencies = { 'nvim-lua/plenary.nvim' },
     config = function()
       require("plugin-settings.telescope").setup()

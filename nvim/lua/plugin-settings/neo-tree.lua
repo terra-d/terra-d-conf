@@ -12,9 +12,7 @@ function M.setup()
     },
   })
 
-  if not IS_VSCODE_NEOVIM then
-    map("n", "<leader>E", "<cmd>:NeoTreeShow<CR>")
-  end
+  map("n", "<leader>E", "<cmd>:NeoTreeShow<CR>")
 end
 
 return M
