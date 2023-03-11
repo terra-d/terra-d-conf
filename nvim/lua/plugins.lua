@@ -70,5 +70,13 @@ return {
     config = function()
       require("plugin-settings.neogit").setup()
     end,
-  }
+  },
+  -- displays a popup with possible key bindings of the command
+  {
+    "folke/which-key.nvim",
+    enabled = not(IS_VSCODE_NEOVIM),
+    config = function()
+      require("plugin-settings.which-key").setup()
+    end,
+  },
 }
