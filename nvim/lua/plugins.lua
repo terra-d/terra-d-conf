@@ -61,5 +61,14 @@ return {
     config = function()
       require("plugin-settings.telescope").setup()
     end,
+  },
+  -- git plugin
+  {
+    'TimUntersberger/neogit',
+    enabled = not(IS_VSCODE_NEOVIM),
+    dependencies = { 'nvim-lua/plenary.nvim' },
+    config = function()
+      require("plugin-settings.neogit").setup()
+    end,
   }
 }

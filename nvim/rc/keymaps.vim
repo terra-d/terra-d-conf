@@ -11,6 +11,12 @@ xnoremap n h
 nnoremap i l
 xnoremap i l
 
+" move pagination
+nnoremap <C-u> <C-b>
+xnoremap <C-u> <C-b>
+nnoremap <C-e> <C-f>
+xnoremap <C-e> <C-f>
+
 " Window handling
 if b:is_vscode_neovim
   nnoremap <C-w>u <Cmd>call VSCodeNotify('workbench.action.focusAboveGroup')<CR>
@@ -35,7 +41,9 @@ endif
 " Complement move
 
 inoremap <C-e> <C-n>
+cnoremap <C-e> <C-n>
 inoremap <C-u> <C-p>
+cnoremap <C-u> <C-p>
 
 " Words forward/backward
 nnoremap l b
