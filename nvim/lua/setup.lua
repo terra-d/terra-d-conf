@@ -22,6 +22,7 @@ require("lazy").setup(plugins, {
     lockfile         = CONFIGRATION_PATH .. "/lazy-lock.json",
     install          = {
         missing = true,
+        colorscheme = { "nightfox" },
     },
     checker          = {
         enabled = true,
