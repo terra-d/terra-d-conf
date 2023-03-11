@@ -32,6 +32,11 @@ else
   xnoremap <C-W>i <C-W>l
 endif
 
+" Complement move
+
+inoremap <C-e> <C-n>
+inoremap <C-u> <C-p>
+
 " Words forward/backward
 nnoremap l b
 xnoremap l b

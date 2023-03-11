@@ -71,3 +71,5 @@ opt.swapfile = false
 -- Set the title's window to the value of titltestring
 opt.title = true
 
+-- mute beep sounds
+opt.visualbell = true
