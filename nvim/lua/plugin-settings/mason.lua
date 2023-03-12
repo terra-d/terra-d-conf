@@ -1,4 +1,6 @@
 local M = {}
+local map = require("utils").map
+local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 local lsp_servers = {
     lua_ls = {
@@ -34,14 +36,30 @@ function M.setup()
             "stylua",
         },
         automatic_installation = false,
-        automatic_setup = true, -- Recommended, but optional
+        automatic_setup = true,
     })
     mason_null_ls.setup_handlers({})
     require("null-ls").setup({
         sources = {
             -- Anything not supported by mason.
         },
+        on_attach = function(client, bufnr)
+            if client.supports_method("textDocument/formatting") then
+                vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+                vim.api.nvim_create_autocmd("BufWritePre", {
+                    group = augroup,
+                    buffer = bufnr,
+                    callback = function()
+                        vim.lsp.buf.format()
+                    end,
+                })
+            end
+        end,
     })
+
+    map("n", "<leader>F", function()
+        vim.lsp.buf.format()
+    end)
 end
 
 return M

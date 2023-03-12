@@ -3,9 +3,6 @@ local opt = vim.opt
 -- No compatible
 opt.compatible = false
 
--- Set color scheme
-opt.background = "dark"
-
 -- Syntax highlighting
 opt.syntax = "on"
 
@@ -24,6 +21,7 @@ opt.expandtab = true
 opt.tabstop = 2
 opt.shiftwidth = 2
 opt.autoindent = true
+opt.smartindent = true
 
 -- Search rules
 opt.ignorecase = true
@@ -50,16 +48,14 @@ opt.encoding = "UTF-8"
 opt.fileformat = "unix"
 
 -- This option will render characters for spaces, tabs etc
--- set listchars=trail:·,tab:»·,eol:↲,nbsp:␣,extends:⟩,precedes:⟨
--- set listchars=eol:↴,¬,
 opt.list = true
 opt.listchars = {
-  space = "·",
-  tab = "»·",
-  trail = "·",
-  nbsp = "␣",
-  extends = "⟩",
-  precedes = "⟨",
+   space = "⋅",
+--    tab = "»·",
+--    trail = "·",
+--    nbsp = "␣",
+--    extends = "⟩",
+--    precedes = "⟨",
 }
 
 -- Set persistent undo
