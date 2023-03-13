@@ -92,4 +92,8 @@ return {
         enabled = not IS_VSCODE_NEOVIM,
         opts = require("plugin-settings.guess-indent"),
     },
+    -- copilot
+    {
+        "github/copilot.vim",
+    },
 }
