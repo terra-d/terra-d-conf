@@ -2,7 +2,7 @@ return {
     -- A highly customizable theme for vim and neovim
     {
         "EdenEast/nightfox.nvim",
-        enabled = not (IS_VSCODE_NEOVIM),
+        enabled = not IS_VSCODE_NEOVIM,
         config = function()
             require("nightfox").setup()
             vim.cmd("colorscheme nordfox")
@@ -11,13 +11,13 @@ return {
     -- tree-sitter
     {
         "nvim-treesitter/nvim-treesitter",
-        enabled = not (IS_VSCODE_NEOVIM),
+        enabled = not IS_VSCODE_NEOVIM,
         opts = require("plugin-settings.nvim-treesitter"),
     },
     -- Showing indent lines
     {
         "lukas-reineke/indent-blankline.nvim",
-        enabled = not (IS_VSCODE_NEOVIM),
+        enabled = not IS_VSCODE_NEOVIM,
         dependencies = {
             "nvim-treesitter/nvim-treesitter",
         },
@@ -49,7 +49,7 @@ return {
     -- A File Explorer For Neovim Written In Lua
     {
         "nvim-neo-tree/neo-tree.nvim",
-        enabled = not (IS_VSCODE_NEOVIM),
+        enabled = not IS_VSCODE_NEOVIM,
         dependencies = {
             "nvim-lua/plenary.nvim",
             "nvim-tree/nvim-web-devicons",
@@ -61,19 +61,19 @@ return {
     },
     -- highly extendable fuzzy finder over lists
     {
-        'nvim-telescope/telescope.nvim',
-        tag = '0.1.1',
-        enabled = not (IS_VSCODE_NEOVIM),
-        dependencies = { 'nvim-lua/plenary.nvim' },
+        "nvim-telescope/telescope.nvim",
+        tag = "0.1.1",
+        enabled = not IS_VSCODE_NEOVIM,
+        dependencies = { "nvim-lua/plenary.nvim" },
         config = function()
             require("plugin-settings.telescope").setup()
         end,
     },
     -- git plugin
     {
-        'TimUntersberger/neogit',
-        enabled = not (IS_VSCODE_NEOVIM),
-        dependencies = { 'nvim-lua/plenary.nvim' },
+        "TimUntersberger/neogit",
+        enabled = not IS_VSCODE_NEOVIM,
+        dependencies = { "nvim-lua/plenary.nvim" },
         config = function()
             require("plugin-settings.neogit").setup()
         end,
@@ -81,9 +81,15 @@ return {
     -- displays a popup with possible key bindings of the command
     {
         "folke/which-key.nvim",
-        enabled = not (IS_VSCODE_NEOVIM),
+        enabled = not IS_VSCODE_NEOVIM,
         config = function()
             require("plugin-settings.which-key").setup()
         end,
+    },
+    -- Blazing fast indentation style detection for Neovim written in Lua
+    {
+        "NMAC427/guess-indent.nvim",
+        enabled = not IS_VSCODE_NEOVIM,
+        opts = require("plugin-settings.guess-indent"),
     },
 }
