@@ -95,7 +95,7 @@ return {
   },
   -- copilot
   {
-    enabled = not IS_VSCODE_NEOVIM,
     "github/copilot.vim",
+    enabled = not IS_VSCODE_NEOVIM,
   },
 }
