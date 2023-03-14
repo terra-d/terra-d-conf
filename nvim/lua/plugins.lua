@@ -35,6 +35,7 @@ return {
     -- linters and formatters
     {
         "williamboman/mason.nvim",
+        enabled = not IS_VSCODE_NEOVIM,
         dependencies = {
             "nvim-lua/plenary.nvim",
             "williamboman/mason-lspconfig.nvim",
@@ -62,8 +63,8 @@ return {
     -- highly extendable fuzzy finder over lists
     {
         "nvim-telescope/telescope.nvim",
-        tag = "0.1.1",
         enabled = not IS_VSCODE_NEOVIM,
+        tag = "0.1.1",
         dependencies = { "nvim-lua/plenary.nvim" },
         config = function()
             require("plugin-settings.telescope").setup()
@@ -94,6 +95,7 @@ return {
     },
     -- copilot
     {
+        enabled = not IS_VSCODE_NEOVIM,
         "github/copilot.vim",
     },
 }
