@@ -12,10 +12,10 @@ nnoremap i l
 xnoremap i l
 
 " move pagination
-nnoremap <C-u> <C-b>
-xnoremap <C-u> <C-b>
-nnoremap <C-e> <C-f>
-xnoremap <C-e> <C-f>
+nnoremap <C-l> <C-b>
+xnoremap <C-l> <C-b>
+nnoremap <C-n> <C-f>
+xnoremap <C-n> <C-f>
 
 " Window handling
 if b:is_vscode_neovim

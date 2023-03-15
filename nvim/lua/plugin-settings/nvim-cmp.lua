@@ -31,8 +31,10 @@ function M.setup()
       -- documentation = cmp.config.window.bordered(),
     },
     mapping = cmp.mapping.preset.insert({
-      ["<C-u>"] = cmp.mapping.scroll_docs(-4),
-      ["<C-e>"] = cmp.mapping.scroll_docs(4),
+      ["<C-e>"] = cmp_select.next,
+      ["<C-u>"] = cmp_select.prev,
+      ["<C-l>"] = cmp.mapping.scroll_docs(-4),
+      ["<C-n>"] = cmp.mapping.scroll_docs(4),
       ["<C-Space>"] = cmp.mapping.complete(),
       ["<C-q>"] = cmp.mapping.abort(),
       ["<CR>"] = cmp.mapping.confirm({
