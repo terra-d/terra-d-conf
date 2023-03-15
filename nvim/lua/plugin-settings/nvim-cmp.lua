@@ -1,7 +1,25 @@
 local M = {}
+local cmp = require("cmp")
+
+local cmp_select = {}
+
+function cmp_select._base(func)
+  if cmp.visible() then
+    func()
+  else
+    cmp.complete()
+  end
+end
+
+function cmp_select.next()
+  cmp_select._base(cmp.select_next_item)
+end
+
+function cmp_select.prev()
+  cmp_select._base(cmp.select_prev_item)
+end
 
 function M.setup()
-  local cmp = require("cmp")
   cmp.setup({
     snippet = {
       expand = function(args)
@@ -38,13 +56,19 @@ function M.setup()
     }),
   })
   cmp.setup.cmdline({ "/", "?" }, {
-    mapping = cmp.mapping.preset.cmdline(),
+    mapping = cmp.mapping.preset.cmdline({
+      ["<C-e>"] = { c = cmp_select.next },
+      ["<C-u>"] = { c = cmp_select.prev },
+    }),
     sources = {
       { name = "buffer" },
     },
   })
   cmp.setup.cmdline(":", {
-    mapping = cmp.mapping.preset.cmdline(),
+    mapping = cmp.mapping.preset.cmdline({
+      ["<C-e>"] = { c = cmp_select.next },
+      ["<C-u>"] = { c = cmp_select.prev },
+    }),
     sources = cmp.config.sources({
       { name = "path" },
     }, {
