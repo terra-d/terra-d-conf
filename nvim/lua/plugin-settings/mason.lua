@@ -5,9 +5,8 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 local lsp_servers = {
   eslint = {
-    settings = {
-      capabilities = capabilities,
-    },
+    settings = {},
+    capabilities = capabilities,
   },
   lua_ls = {
     settings = {
@@ -21,14 +20,13 @@ local lsp_servers = {
           -- Get the language server to recognize the `vim` global
           globals = { "vim" },
         },
-        capabilities = capabilities,
       },
+      capabilities = capabilities,
     },
   },
   pyright = {
-    settings = {
-      capabilities = capabilities,
-    },
+    settings = {},
+    capabilities = capabilities,
   },
 }
 
