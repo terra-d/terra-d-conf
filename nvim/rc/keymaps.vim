@@ -39,11 +39,14 @@ else
 endif
 
 " Complement move
-
-inoremap <C-e> <C-n>
-cnoremap <C-e> <C-n>
-inoremap <C-u> <C-p>
-cnoremap <C-u> <C-p>
+if b:is_vscode_neovim
+  " TODO
+else
+  inoremap <C-e> <C-n>
+  cnoremap <C-e> <C-n>
+  inoremap <C-u> <C-p>
+  cnoremap <C-u> <C-p>
+endif
 
 " Words forward/backward
 nnoremap l b
