@@ -4,6 +4,11 @@ local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 local lsp_servers = {
+  eslint = {
+    settings = {
+      capabilities = capabilities,
+    },
+  },
   lua_ls = {
     settings = {
       Lua = {
@@ -20,7 +25,11 @@ local lsp_servers = {
       },
     },
   },
-  pyright = {},
+  pyright = {
+    settings = {
+      capabilities = capabilities,
+    },
+  },
 }
 
 function M.setup()
