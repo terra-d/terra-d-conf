@@ -1,10 +1,9 @@
--- TODO: make this plugin not work in vscode
 local M = {}
 local map = require("utils").map
 
 function M.setup()
-  local builtin = require('telescope.builtin')
-  local actions = require('telescope.actions')
+  local builtin = require("telescope.builtin")
+  local actions = require("telescope.actions")
   require("telescope").setup({
     defaults = {
       mappings = {
@@ -16,9 +15,9 @@ function M.setup()
         },
         i = {
           ["<C-s>"] = actions.select_horizontal,
-        }
-      }
-    }
+        },
+      },
+    },
   })
 
   map("n", "<leader>p", builtin.find_files)

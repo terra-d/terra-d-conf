@@ -1,6 +1,7 @@
 local M = {}
 local map = require("utils").map
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 local lsp_servers = {
   lua_ls = {
@@ -15,6 +16,7 @@ local lsp_servers = {
           -- Get the language server to recognize the `vim` global
           globals = { "vim" },
         },
+        capabilities = capabilities,
       },
     },
   },

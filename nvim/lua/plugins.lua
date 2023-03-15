@@ -42,6 +42,7 @@ return {
       "jose-elias-alvarez/null-ls.nvim",
       "jayp0521/mason-null-ls.nvim",
       "neovim/nvim-lspconfig",
+      "hrsh7th/cmp-nvim-lsp",
     },
     config = function()
       require("plugin-settings.mason").setup()
@@ -93,6 +94,25 @@ return {
     enabled = not IS_VSCODE_NEOVIM,
     opts = require("plugin-settings.guess-indent"),
   },
+  --A completion engine plugin for neovim written in Lua.
+  {
+    "hrsh7th/nvim-cmp",
+    enabled = not IS_VSCODE_NEOVIM,
+    dependencies = {
+      "neovim/nvim-lspconfig",
+      "L3MON4D3/LuaSnip",
+      "saadparwaiz1/cmp_luasnip",
+      "hrsh7th/cmp-buffer",
+      "hrsh7th/cmp-path",
+      "hrsh7th/cmp-cmdline",
+      "L3MON4D3/LuaSnip",
+      "saadparwaiz1/cmp_luasnip",
+    },
+    config = function()
+      require("plugin-settings.nvim-cmp").setup()
+    end,
+  },
+
   -- copilot
   {
     "github/copilot.vim",

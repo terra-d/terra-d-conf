@@ -40,7 +40,7 @@ endif
 
 " Complement move
 if b:is_vscode_neovim
-  " TODO
+  " Note: Congigured in VSCode
 else
   inoremap <C-e> <C-n>
   cnoremap <C-e> <C-n>
@@ -90,7 +90,7 @@ xnoremap gz :<C-U>undo<CR>
 nnoremap <nowait> Z <C-R>
 xnoremap Z :<C-U>redo<CR>
 
-" Visual mode {{{
+" Visual mode
 nnoremap a v
 xnoremap a v
 nnoremap A V
