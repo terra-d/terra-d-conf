@@ -50,12 +50,12 @@ opt.fileformat = "unix"
 -- This option will render characters for spaces, tabs etc
 opt.list = true
 opt.listchars = {
-   space = "⋅",
---    tab = "»·",
---    trail = "·",
---    nbsp = "␣",
---    extends = "⟩",
---    precedes = "⟨",
+  space = "⋅",
+  --    tab = "»·",
+  --    trail = "·",
+  --    nbsp = "␣",
+  --    extends = "⟩",
+  --    precedes = "⟨",
 }
 
 -- Set persistent undo

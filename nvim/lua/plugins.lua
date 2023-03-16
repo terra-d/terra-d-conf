@@ -115,7 +115,14 @@ return {
   },
   -- copilot
   {
-    "github/copilot.vim",
+    "zbirenbaum/copilot.lua",
+    dependencies = {
+      "github/copilot.vim",
+    },
+    event = "InsertEnter",
+    config = function()
+      require("copilot").setup({})
+    end,
     enabled = not IS_VSCODE_NEOVIM,
   },
 }
