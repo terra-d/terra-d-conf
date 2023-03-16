@@ -8,6 +8,17 @@ return {
       vim.cmd("colorscheme nordfox")
     end,
   },
+  -- A blazing fast and easy to configure Neovim statusline written in Lua.
+  {
+    "nvim-lualine/lualine.nvim",
+    enabled = not IS_VSCODE_NEOVIM,
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
+    },
+    config = function()
+      require("plugin-settings.lualine").setup()
+    end,
+  },
   -- tree-sitter
   {
     "nvim-treesitter/nvim-treesitter",
@@ -116,13 +127,20 @@ return {
   -- copilot
   {
     "zbirenbaum/copilot.lua",
+    enabled = not IS_VSCODE_NEOVIM,
     dependencies = {
       "github/copilot.vim",
     },
-    event = "InsertEnter",
     config = function()
-      require("copilot").setup({})
+      require("plugin-settings.copilot").setup()
     end,
+  },
+  -- This repository transforms copilot into a cmp source.
+  {
+    "zbirenbaum/copilot-cmp",
     enabled = not IS_VSCODE_NEOVIM,
+    dependencies = {
+      "zbirenbaum/copilot.lua",
+    },
   },
 }
