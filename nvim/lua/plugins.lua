@@ -59,6 +59,14 @@ return {
       require("plugin-settings.mason").setup()
     end,
   },
+  -- Standalone UI for nvim-lsp progress
+  {
+    "j-hui/fidget.nvim",
+    enabled = not IS_VSCODE_NEOVIM,
+    dependencies = {
+      "neovim/nvim-lspconfig",
+    },
+  },
   -- A File Explorer For Neovim Written In Lua
   {
     "nvim-neo-tree/neo-tree.nvim",
