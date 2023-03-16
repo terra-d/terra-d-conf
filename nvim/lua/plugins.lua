@@ -50,13 +50,22 @@ return {
     dependencies = {
       "nvim-lua/plenary.nvim",
       "williamboman/mason-lspconfig.nvim",
-      "jose-elias-alvarez/null-ls.nvim",
       "jayp0521/mason-null-ls.nvim",
       "neovim/nvim-lspconfig",
       "hrsh7th/cmp-nvim-lsp",
     },
     config = function()
       require("plugin-settings.mason").setup()
+    end,
+  },
+  {
+    "jayp0521/mason-null-ls.nvim",
+    enabled = not IS_VSCODE_NEOVIM,
+    dependencies = {
+      "jose-elias-alvarez/null-ls.nvim",
+    },
+    config = function()
+      require("plugin-settings.mason-null-ls").setup()
     end,
   },
   -- Standalone UI for nvim-lsp progress
