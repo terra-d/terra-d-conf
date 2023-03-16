@@ -38,9 +38,11 @@ function M.setup()
       end
     end,
   })
-
   map("n", "<leader>F", function()
     vim.lsp.buf.format()
+  end)
+  map("n", "N", function()
+    vim.lsp.buf.hover()
   end)
 end
 
