@@ -1,9 +1,8 @@
 local M = {}
 local map = require("utils").map
+local actions = require("telescope.actions")
 
 function M.setup()
-  local builtin = require("telescope.builtin")
-  local actions = require("telescope.actions")
   require("telescope").setup({
     defaults = {
       mappings = {
@@ -14,13 +13,15 @@ function M.setup()
           ["v"] = actions.select_vertical,
         },
         i = {
+          ["<C-u>"] = actions.move_selection_previous,
+          ["<C-e>"] = actions.move_selection_next,
           ["<C-s>"] = actions.select_horizontal,
         },
       },
     },
   })
 
-  map("n", "<leader>p", builtin.find_files)
+  map("n", "<leader>p", "<cmd>Telescope find_files<cr>")
 end
 
 return M
