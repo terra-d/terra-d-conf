@@ -99,21 +99,15 @@ nnoremap <C-A> <C-V>
 xnoremap <C-A> <C-V>
 
 " Search
-"    " f/F are unchanged
-"    nnoremap p t
-"    xnoremap p t
-"    nnoremap P T
-"    xnoremap P T
-"    nnoremap b ;
-"    xnoremap b ;
-"    nnoremap B ,
-"    xnoremap B ,
 nnoremap k n
 xnoremap k n
 nnoremap K N
 xnoremap K N
 onoremap gk gn
 onoremap gK gN
+nnoremap ? /\v
+cnoremap %s/ %s/\v
+nnoremap <Esc><Esc> <cmd>nohlsearch<CR>
 
 "" inneR text objects {{{
 "    " E.g. dip (delete inner paragraph) is now drp
@@ -170,7 +164,3 @@ nnoremap <leader>v "+P
 " increment
 nnoremap <C-R> <C-A>
 
-" Searching
-nnoremap ? /\v
-cnoremap %s/ %s/\v
-nnoremap <Esc><Esc> <cmd>nohlsearch<CR>
