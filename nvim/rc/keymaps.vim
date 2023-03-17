@@ -174,3 +174,4 @@ nnoremap <C-R> <C-A>
 nnoremap / /\V
 nnoremap ? /\v
 cnoremap %s/ %s/\v
+nnoremap <Esc><Esc> <cmd>nohlsearch<CR>
