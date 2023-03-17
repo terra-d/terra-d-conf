@@ -112,6 +112,8 @@ nnoremap k n
 xnoremap k n
 nnoremap K N
 xnoremap K N
+onoremap gk gn
+onoremap gK gN
 
 "" inneR text objects {{{
 "    " E.g. dip (delete inner paragraph) is now drp
