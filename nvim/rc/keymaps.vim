@@ -167,3 +167,8 @@ nnoremap <leader>v "+P
 
 " increment
 nnoremap <C-R> <C-A>
+
+" Searching
+nnoremap / /\V
+nnoremap ? /\v
+cnoremap %s/ %s/\v
