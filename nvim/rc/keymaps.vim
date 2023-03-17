@@ -171,7 +171,6 @@ nnoremap <leader>v "+P
 nnoremap <C-R> <C-A>
 
 " Searching
-nnoremap / /\V
 nnoremap ? /\v
 cnoremap %s/ %s/\v
 nnoremap <Esc><Esc> <cmd>nohlsearch<CR>
