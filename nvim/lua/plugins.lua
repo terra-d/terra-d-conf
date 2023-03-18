@@ -57,19 +57,29 @@ return {
     enabled = not IS_VSCODE_NEOVIM,
     dependencies = {
       "nvim-lua/plenary.nvim",
-      "williamboman/mason-lspconfig.nvim",
-      "jayp0521/mason-null-ls.nvim",
-      "neovim/nvim-lspconfig",
-      "hrsh7th/cmp-nvim-lsp",
     },
     config = function()
       require("plugin-settings.mason").setup()
     end,
   },
   {
+    "williamboman/mason-lspconfig.nvim",
+    enabled = not IS_VSCODE_NEOVIM,
+    dependencies = {
+      "williamboman/mason.nvim",
+      "williamboman/mason-lspconfig.nvim",
+      "neovim/nvim-lspconfig",
+      "hrsh7th/cmp-nvim-lsp",
+    },
+    config = function()
+      require("plugin-settings.mason-lspconfig").setup()
+    end,
+  },
+  {
     "jayp0521/mason-null-ls.nvim",
     enabled = not IS_VSCODE_NEOVIM,
     dependencies = {
+      "williamboman/mason.nvim",
       "jose-elias-alvarez/null-ls.nvim",
     },
     config = function()
