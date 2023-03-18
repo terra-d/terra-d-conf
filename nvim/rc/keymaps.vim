@@ -107,6 +107,7 @@ onoremap gk gn
 onoremap gK gN
 nnoremap ? /\v
 cnoremap %s/ %s/\v
+cnoremap %<Space> %
 nnoremap <Esc><Esc> <cmd>nohlsearch<CR>
 
 "" inneR text objects {{{

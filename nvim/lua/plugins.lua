@@ -19,6 +19,14 @@ return {
       require("plugin-settings.lualine").setup()
     end,
   },
+  -- Scrollbar for Neovim
+  {
+    "petertriho/nvim-scrollbar",
+    enabled = not IS_VSCODE_NEOVIM,
+    config = function()
+      require("plugin-settings.nvim-scrollbar").setup()
+    end,
+  },
   -- tree-sitter
   {
     "nvim-treesitter/nvim-treesitter",
