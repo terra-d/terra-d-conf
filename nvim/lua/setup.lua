@@ -18,13 +18,13 @@ vim.opt.rtp:prepend(lazypath)
 
 local plugins = require("plugins")
 require("lazy").setup(plugins, {
-    root             = vim.fn.stdpath("data") .. "/lazy",
-    lockfile         = CONFIGRATION_PATH .. "/lazy-lock.json",
-    install          = {
+    root = vim.fn.stdpath("data") .. "/lazy",
+    lockfile = CONFIGRATION_PATH .. "/lazy-lock.json",
+    install = {
         missing = true,
         colorscheme = { "nightfox" },
     },
-    checker          = {
+    checker = {
         enabled = true,
         notify = true,
     },
@@ -32,10 +32,10 @@ require("lazy").setup(plugins, {
         enabled = true,
         notify = true,
     },
-    diff             = {
+    diff = {
         cmd = "git",
     },
-    performance      = {
+    performance = {
         cache = {
             enabled = true,
             path = vim.fn.stdpath("cache") .. "/lazy/cache",

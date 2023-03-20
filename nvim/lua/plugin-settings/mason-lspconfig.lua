@@ -1,40 +1,31 @@
 local M = {}
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-local lsp_servers = {
-  eslint = {
-    settings = {},
-    capabilities = capabilities,
-  },
-  lua_ls = {
-    settings = {
-      Lua = {
-        runtime = {
-          -- Tell the language server which version of Lua
-          -- you're using (most likely LuaJIT in the case of Neovim)
-          version = "LuaJIT",
-        },
-        diagnostics = {
-          -- Get the language server to recognize the `vim` global
-          globals = { "vim" },
-        },
-      },
-      capabilities = capabilities,
-    },
-  },
-  pyright = {
-    settings = {},
-    capabilities = capabilities,
-  },
-}
-
 function M.setup()
-  require("mason-lspconfig").setup({
-    ensure_installed = vim.tbl_keys(lsp_servers),
+  local mason_lspconfig = require("mason-lspconfig")
+  mason_lspconfig.setup()
+  mason_lspconfig.setup_handlers({
+    function(server_name)
+      require("lspconfig")[server_name].setup({
+        capabilities = capabilities,
+      })
+    end,
+    ["lua_ls"] = function()
+      require("lspconfig")["lua_ls"].setup({
+        settings = {
+          Lua = {
+            runtime = {
+              version = "LuaJIT",
+            },
+            diagnostics = {
+              globals = { "vim" },
+            },
+          },
+          capabilities = capabilities,
+        },
+      })
+    end,
   })
-  for _, server in ipairs(vim.tbl_keys(lsp_servers)) do
-    require("lspconfig")[server].setup(lsp_servers[server])
-  end
 end
 
 return M
