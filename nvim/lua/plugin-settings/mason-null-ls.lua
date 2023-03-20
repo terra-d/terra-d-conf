@@ -1,5 +1,4 @@
 local M = {}
-local map = require("utils").map
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 function M.setup()
@@ -38,12 +37,6 @@ function M.setup()
       end
     end,
   })
-  map("n", "<leader>F", function()
-    vim.lsp.buf.format()
-  end)
-  map("n", "N", function()
-    vim.lsp.buf.hover()
-  end)
 end
 
 return M

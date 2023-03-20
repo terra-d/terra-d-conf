@@ -73,6 +73,7 @@ return {
     },
     config = function()
       require("plugin-settings.mason-lspconfig").setup()
+      require("lsp").setup()
     end,
   },
   {
