@@ -1,5 +1,6 @@
 local M = {}
 local cmp = require("cmp")
+local cmp_auto = require("nvim-autopairs.completion.cmp")
 
 local cmp_select = {}
 
@@ -53,7 +54,7 @@ function M.setup()
 
   cmp.setup.filetype("gitcommit", {
     sources = cmp.config.sources({
-      { name = "cmp_git" }, -- You can specify the `cmp_git` source if you were installed it.
+      { name = "cmp_git" },
     }, {
       { name = "buffer" },
     }),
@@ -79,10 +80,7 @@ function M.setup()
     }),
   })
 
-  -- local capabilities = require("cmp_nvim_lsp").default_capabilities()
-  -- require("lspconfig")["<YOUR_LSP_SERVER>"].setup({
-  --   capabilities = capabilities,
-  -- })
+  cmp.event:on("confirm_done", cmp_auto.on_confirm_done())
 end
 
 return M

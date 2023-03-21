@@ -50,6 +50,12 @@ return {
       require("plugin-settings.hop").setup()
     end,
   },
+  -- A super powerful autopair plugin
+  {
+    "windwp/nvim-autopairs",
+    enabled = not IS_VSCODE_NEOVIM,
+    opts = {},
+  },
   -- Portable package manager to install LSP & DAP servers,
   -- linters and formatters
   {
@@ -155,6 +161,7 @@ return {
       "petertriho/cmp-git",
       "L3MON4D3/LuaSnip",
       "saadparwaiz1/cmp_luasnip",
+      "windwp/nvim-autopairs",
     },
     config = function()
       require("plugin-settings.nvim-cmp").setup()
