@@ -1,5 +1,6 @@
 let g:mapleader = ","
 let b:is_vscode_neovim = exists('g:vscode')
+let b:is_wsl = system('uname -r') =~? 'microsoft'
 
 " Up/down/left/right
 nnoremap u k
@@ -156,9 +157,18 @@ nnoremap v p
 xnoremap v p
 nnoremap V P
 xnoremap V P
-nnoremap <leader>c "+y
-xnoremap <leader>c "+y
-nnoremap <leader>C "+y$
+let b:clipexe = '/mnt/c/Windows/System32/clip.exe'
+if b:is_wsl
+  vnoremap <RightMouse> y:call system(b:clipexe, @")<CR>
+  " TODO
+  " nnoremap <leader>c y:call system(b:clipexe, @")<CR>
+  " xnoremap <leader>c y:call system(b:clipexe, @")<CR>
+  " nnoremap <leader>C y:call system(b:clipexe, @")<CR>
+else
+  nnoremap <leader>c "+y
+  xnoremap <leader>c "+y
+  nnoremap <leader>C "+y$
+endif
 nnoremap <leader>v "+p
 nnoremap <leader>v "+P
 
