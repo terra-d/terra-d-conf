@@ -42,15 +42,24 @@ return {
     },
     opts = require("plugin-settings.indent-blankline"),
   },
-  -- Easymotion
+  -- Leap is a general-purpose motion plugin
   {
-    "phaazon/hop.nvim",
-    branch = "v2",
+    "ggandor/leap.nvim",
+    dependencies = {
+      "tpope/vim-repeat",
+    },
     config = function()
-      require("plugin-settings.hop").setup()
+      require("plugin-settings.leap").setup()
     end,
   },
-  -- A super powerful autopair plugin
+  -- f/F/t/T motions on steroids, building on the Leap interface.
+  {
+    "ggandor/flit.nvim",
+    dependencies = {
+      "ggandor/leap.nvim",
+    },
+    opts = require("plugin-settings.flit"),
+  },
   {
     "windwp/nvim-autopairs",
     enabled = not IS_VSCODE_NEOVIM,
