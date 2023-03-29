@@ -31,18 +31,11 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     enabled = not IS_VSCODE_NEOVIM,
-    opts = require("plugin-settings.nvim-treesitter"),
-  },
-  -- Yet another tree-sitter indent plugin for Neovim.
-  {
-    "yioneko/nvim-yati",
-    enabled = not IS_VSCODE_NEOVIM,
     dependencies = {
-      "nvim-treesitter/nvim-treesitter",
+      -- Yet another tree-sitter indent plugin for Neovim.
+      "yioneko/nvim-yati",
     },
-    config = function()
-      require("plugin-settings.nvim-yati").setup()
-    end,
+    opts = require("plugin-settings.nvim-treesitter"),
   },
   -- Showing indent lines
   {
