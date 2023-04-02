@@ -5,8 +5,6 @@ curl -sS https://starship.rs/install.sh | sh
 # fish
 chsh -s /usr/bin/fish
 
-fish
-
 # starship
 curl -sS https://starship.rs/install.sh | sh
 
