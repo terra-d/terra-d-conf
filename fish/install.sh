@@ -7,6 +7,7 @@ sudo pacman -S --needed fzf
 sudo pacman -S --needed github-cli
 sudo pacman -S --needed starship
 sudo pacman -S --needed tk
+sudo pacman -S --needed wget
 sudo pacman -S --needed which
 sudo pacman -S --needed zip unzip
 
@@ -32,6 +33,10 @@ fish -c "set -Ux STARSHIP_CONFIG $HOME/terra-d-conf/starship.toml"
 fish -c "fish_add_path $HOME/.local/share/rtx/bin"
 fish -c "rtx install awscli@2"
 fish -c "rtx global awscli@2"
+fish -c "rtx install lua@5"
+fish -c "rtx global lua@5"
+fish -c "rtx install luaJIT@2.0.5--2.4.4"
+fish -c "rtx global luaJIT@2.0.5--2.4.4"
 fish -c "rtx install node@18"
 fish -c "rtx global node@18"
 fish -c "rtx install python@3.11"
