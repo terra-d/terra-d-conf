@@ -25,7 +25,7 @@ echo "SETUVAR --export XDG_CONFIG_HOME:/home/terra/terra\\x2dd\\x2dconf" >> /hom
 
 # fisher
 curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
-fisher install PatrickF1/fzf.fish
+fisher update
 
 # rtx
 fish -c "set -Ux STARSHIP_CONFIG $HOME/terra-d-conf/starship.toml"
