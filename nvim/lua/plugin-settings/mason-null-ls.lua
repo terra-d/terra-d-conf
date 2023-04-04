@@ -1,5 +1,15 @@
 local M = {}
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
+local filetypes_not_formatted_on_save = {"JavaScript", "TypeScript", "Vue"}
+
+local function is_filetype_not_formatted_on_save(filetype)
+  for _, ft in ipairs(filetypes_not_formatted_on_save) do
+    if ft == filetype then
+      return true
+    end
+  end
+  return false
+end
 
 function M.setup()
   local mason_null_ls = require("mason-null-ls")
@@ -25,16 +35,17 @@ function M.setup()
       -- Anything not supported by mason.
     },
     on_attach = function(client, bufnr)
-      if client.supports_method("textDocument/formatting") then
-        vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
-        vim.api.nvim_create_autocmd("BufWritePre", {
-          group = augroup,
-          buffer = bufnr,
-          callback = function()
-            vim.lsp.buf.format()
-          end,
-        })
+      if not client.supports_method("textDocument/formatting") or not is_filetype_not_formatted_on_save(vim.bo.filetype) then
+        return
       end
+      vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+      vim.api.nvim_create_autocmd("BufWritePre", {
+        group = augroup,
+        buffer = bufnr,
+        callback = function()
+          vim.lsp.buf.format()
+        end,
+      })
     end,
   })
 end
