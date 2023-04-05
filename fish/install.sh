@@ -44,5 +44,4 @@ fish -c "rtx global python@3.11"
 fish -c "rtx install rust@1"
 fish -c "rtx global rust@1"
 
-
 echo "Please restart shell."
