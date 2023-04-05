@@ -21,7 +21,16 @@ function cmp_select.prev()
   cmp_select._base(cmp.select_prev_item)
 end
 
+local has_words_before = function()
+  if vim.api.nvim_buf_get_option(0, "buftype") == "prompt" then
+    return false
+  end
+  local line, col = unpack(vim.api.nvim_win_get_cursor(0))
+  return col ~= 0 and vim.api.nvim_buf_get_text(0, line - 1, 0, line - 1, col, {})[1]:match("^%s*$") == nil
+end
+
 function M.setup()
+  require("copilot_cmp").setup()
   cmp.setup({
     snippet = {
       expand = function(args)
@@ -42,21 +51,32 @@ function M.setup()
       ["<CR>"] = cmp.mapping.confirm({
         select = true,
       }),
+      ["<Tab>"] = vim.schedule_wrap(function(fallback)
+        if cmp.visible() and has_words_before() then
+          cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
+        else
+          fallback()
+        end
+      end),
     }),
     sources = cmp.config.sources({
-      { name = "nvim_lsp" },
       { name = "copilot" },
       { name = "luasnip" },
+      { name = "nvim_lsp" },
+      { name = "nvim_lsp_signature_help" },
+      { name = "nvim_lua" },
+      { name = "path" },
+      { name = "treesitter" },
       {
         { name = "buffer" },
       },
     }),
     formatting = {
       format = lspkind.cmp_format({
-        mode = 'symbol',
+        mode = "symbol",
         maxwidth = 50,
-        ellipsis_char = '...',
-      })
+        ellipsis_char = "...",
+      }),
     },
   })
 
@@ -73,7 +93,10 @@ function M.setup()
       ["<C-u>"] = { c = cmp_select.prev },
     }),
     sources = {
-      { name = "buffer" },
+      { name = "nvim_lsp_document_symbol" },
+      {
+        { name = "buffer" },
+      },
     },
   })
   cmp.setup.cmdline(":", {
