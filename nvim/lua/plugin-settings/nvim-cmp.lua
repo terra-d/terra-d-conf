@@ -1,5 +1,6 @@
 local M = {}
 local cmp = require("cmp")
+local lspkind = require("lspkind")
 local cmp_auto = require("nvim-autopairs.completion.cmp")
 
 local cmp_select = {}
@@ -50,6 +51,13 @@ function M.setup()
         { name = "buffer" },
       },
     }),
+    formatting = {
+      format = lspkind.cmp_format({
+        mode = 'symbol',
+        maxwidth = 50,
+        ellipsis_char = '...',
+      })
+    },
   })
 
   cmp.setup.filetype("gitcommit", {

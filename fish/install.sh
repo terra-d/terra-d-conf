@@ -1,15 +1,15 @@
 # installation
-sudo pacman -S --needed base-devel
-sudo pacman -S --needed bat
-sudo pacman -S --needed fd
-sudo pacman -S --needed fish
-sudo pacman -S --needed fzf
-sudo pacman -S --needed github-cli
-sudo pacman -S --needed starship
-sudo pacman -S --needed tk
-sudo pacman -S --needed wget
-sudo pacman -S --needed which
-sudo pacman -S --needed zip unzip
+sudo -I pacman -S --needed --noconfirm base-devel
+sudo -I pacman -S --needed --noconfirm bat
+sudo -I pacman -S --needed --noconfirm fd
+sudo -I pacman -S --needed --noconfirm fish
+sudo -I pacman -S --needed --noconfirm fzf
+sudo -I pacman -S --needed --noconfirm github-cli
+sudo -I pacman -S --needed --noconfirm starship
+sudo -I pacman -S --needed --noconfirm tk
+sudo -I pacman -S --needed --noconfirm wget
+sudo -I pacman -S --needed --noconfirm which
+sudo -I pacman -S --needed --noconfirm zip unzip
 
 curl https://rtx.pub/install.sh | sh
 
@@ -35,8 +35,6 @@ fish -c "rtx install awscli@2"
 fish -c "rtx global awscli@2"
 fish -c "rtx install lua@5"
 fish -c "rtx global lua@5"
-fish -c "rtx install luaJIT@2.0.5--2.4.4"
-fish -c "rtx global luaJIT@2.0.5--2.4.4"
 fish -c "rtx install node@18"
 fish -c "rtx global node@18"
 fish -c "rtx install python@3.11"
