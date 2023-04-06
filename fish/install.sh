@@ -20,10 +20,6 @@ yay -S google-chrome
 echo `(which chsh)` | sudo tee -a /etc/shells
 chsh -s /usr/bin/fish
 
-mkdir -p $HOME/.config/fish
-echo fish > $HOME/.config/fish/config.fish
-echo "SETUVAR --export XDG_CONFIG_HOME:/home/terra/terra\\x2dd\\x2dconf" >> /home/terra/.config/fish_variables
-
 # fisher
 curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
 fisher update
