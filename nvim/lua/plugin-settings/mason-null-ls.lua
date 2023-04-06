@@ -1,6 +1,6 @@
 local M = {}
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
-local filetypes_not_formatted_on_save = { "JavaScript", "TypeScript", "Vue" }
+local filetypes_not_formatted_on_save = { "javascript", "typescript", "vue" }
 
 local function is_filetype_not_formatted_on_save(filetype)
   for _, ft in ipairs(filetypes_not_formatted_on_save) do
