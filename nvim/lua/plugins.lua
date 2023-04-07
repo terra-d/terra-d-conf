@@ -113,6 +113,19 @@ return {
     dependencies = {
       "neovim/nvim-lspconfig",
     },
+    opts = {},
+  },
+  -- A pretty list for showing diagnostics, references,
+  -- telescope results, quickfix and location lists
+  {
+    "folke/trouble.nvim",
+    enabled = not IS_VSCODE_NEOVIM,
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
+    },
+    config = function()
+      require("plugin-settings.trouble").setup()
+    end,
   },
   -- A File Explorer For Neovim Written In Lua
   {
