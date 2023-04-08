@@ -1,9 +1,10 @@
 local M = {}
 local map = require("utils").map
 local actions = require("telescope.actions")
+local telescope = require("telescope")
 
 function M.setup()
-  require("telescope").setup({
+  telescope.setup({
     defaults = {
       mappings = {
         n = {
@@ -21,7 +22,11 @@ function M.setup()
     },
   })
 
-  map("n", "<leader>p", "<cmd>Telescope find_files<cr>")
+  telescope.load_extension("frecency")
+
+  map("n", "<leader>p", "<cmd>Telescope frecency<cr>")
+  map("n", "<leader>P", "<cmd>Telescope find_files<cr>")
+  map("n", "<leader>F", "<cmd>Telescope live_greps<cr>")
 end
 
 return M

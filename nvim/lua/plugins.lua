@@ -37,6 +37,23 @@ return {
     },
     opts = require("plugin-settings.nvim-treesitter"),
   },
+  {
+    "nvim-treesitter/nvim-treesitter-context",
+    enabled = not IS_VSCODE_NEOVIM,
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+    },
+    opts = {},
+  },
+  -- Highlight arguments' definitions and usages, asynchronously, using Treesitter
+  {
+    "m-demare/hlargs.nvim",
+    enabled = not IS_VSCODE_NEOVIM,
+    depndencies = {
+      "nvim-treesitter/nvim-treesitter",
+    },
+    opts = {},
+  },
   -- Showing indent lines
   {
     "lukas-reineke/indent-blankline.nvim",
@@ -145,7 +162,12 @@ return {
     "nvim-telescope/telescope.nvim",
     enabled = not IS_VSCODE_NEOVIM,
     tag = "0.1.1",
-    dependencies = { "nvim-lua/plenary.nvim" },
+    dependencies = {
+      "kkharji/sqlite.lua",
+      "nvim-lua/plenary.nvim",
+      "nvim-telescope/telescope-frecency.nvim",
+      "nvim-tree/nvim-web-devicons",
+    },
     config = function()
       require("plugin-settings.telescope").setup()
     end,
