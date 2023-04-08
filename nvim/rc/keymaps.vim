@@ -176,6 +176,9 @@ nnoremap <leader>v "+P
 nnoremap <C-R> <C-A>
 
 " save and close
-nnoremap <C-w><C-w> <cmd>w<CR>
-nnoremap <C-q><C-q> <cmd>q<CR>
-
+if b:is_vscode_neovim
+  " TODO
+else
+  nnoremap <C-w><C-w> <cmd>w<CR>
+  nnoremap <C-q><C-q> <cmd>q<CR>
+endif
