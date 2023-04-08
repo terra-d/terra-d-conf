@@ -175,3 +175,7 @@ nnoremap <leader>v "+P
 " increment
 nnoremap <C-R> <C-A>
 
+" save and close
+nnoremap <C-w><C-w> <cmd>w<CR>
+nnoremap <C-q><C-q> <cmd>q<CR>
+
