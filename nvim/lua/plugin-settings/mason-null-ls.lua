@@ -18,16 +18,12 @@ function M.setup()
     ensure_installed = {
       -- Opt to list sources here, when available in mason.
     },
-    automatic_installation = true,
     automatic_setup = true,
-  })
-  mason_null_ls.setup_handlers({
-    function(source_name, methods)
-      require("mason-null-ls.automatic_setup")(source_name, methods)
-    end,
-    stylua = function(source_name, methods)
-      null_ls.register(null_ls.builtins.formatting.stylua)
-    end,
+    handlers = {
+      stylua = function(source_name, methods)
+        null_ls.register(null_ls.builtins.formatting.stylua)
+      end,
+    },
   })
 
   require("null-ls").setup({
