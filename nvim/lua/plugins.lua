@@ -181,6 +181,14 @@ return {
       require("plugin-settings.neogit").setup()
     end,
   },
+  -- Super fast git decorations implemented purely in lua/teal.
+  {
+    "lewis6991/gitsigns.nvim",
+    enabled = not IS_VSCODE_NEOVIM,
+    config = function()
+      require("plugin-settings.gitsigns").setup()
+    end,
+  },
   -- displays a popup with possible key bindings of the command
   {
     "folke/which-key.nvim",
