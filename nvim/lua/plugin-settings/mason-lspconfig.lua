@@ -11,6 +11,14 @@ function M.setup()
         capabilities = capabilities,
       })
     end,
+    ["eslint"] = function()
+      lspconfig["eslint"].setup({
+        on_attach = function(_client, bufnr)
+          vim.api.nvim_create_autocmd("BufWritePre", { buffer = bufnr, command = "EslintFixAll" })
+        end,
+        capabilities = capabilities,
+      })
+    end,
     ["lua_ls"] = function()
       lspconfig["lua_ls"].setup({
         settings = {
