@@ -25,10 +25,12 @@ chsh -s /usr/bin/fish
 curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
 fisher update
 
-# rtx
 fish -c "set -Ux STARSHIP_CONFIG $HOME/terra-d-conf/starship.toml"
 fish -c "set -Ux RIPGREP_CONFIG_PATH $HOME/.config/.ripgreprc"
+fish -c "set -Ux PIPENV_VENV_IN_PROJECT 1"
 fish -c "fish_add_path $HOME/.local/share/rtx/bin"
+
+# rtx
 fish -c "rtx install awscli@2"
 fish -c "rtx global awscli@2"
 fish -c "rtx install lua@5"
