@@ -4,17 +4,19 @@ local map = require("utils").map
 function M.setup()
   require("neogit").setup({
     mappings = {
-      -- modify status buffer mappings
       status = {
         ["u"] = "",
         ["U"] = "",
-        ["d"] = "Unstage",
-        ["D"] = "UnstageStaged",
-      }
-    }
+        ["t"] = "Unstage",
+        ["T"] = "UnstageStaged",
+      },
+    },
+    integrations = {
+      diffview = true,
+    },
   })
 
-   map("n", "<leader>G", "<cmd>Neogit<CR>")
+  map("n", "<leader>G", "<cmd>Neogit<CR>")
 end
 
 return M

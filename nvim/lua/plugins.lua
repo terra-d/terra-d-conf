@@ -176,9 +176,17 @@ return {
   {
     "TimUntersberger/neogit",
     enabled = not IS_VSCODE_NEOVIM,
-    dependencies = { "nvim-lua/plenary.nvim" },
+    dependencies = { "nvim-lua/plenary.nvim", "sindrets/diffview.nvim" },
     config = function()
       require("plugin-settings.neogit").setup()
+    end,
+  },
+  {
+    "sindrets/diffview.nvim",
+    enabled = not IS_VSCODE_NEOVIM,
+    dependencies = { "nvim-lua/plenary.nvim" },
+    config = function()
+      require("plugin-settings.diffview").setup()
     end,
   },
   -- Super fast git decorations implemented purely in lua/teal.
