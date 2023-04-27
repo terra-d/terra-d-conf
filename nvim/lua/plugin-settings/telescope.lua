@@ -24,8 +24,8 @@ function M.setup()
 
   telescope.load_extension("frecency")
 
-  map("n", "<leader>p", "<cmd>Telescope frecency<cr>")
-  map("n", "<leader>P", "<cmd>Telescope find_files<cr>")
+  map("n", "<leader><leader>", "<cmd>Telescope frecency<cr>")
+  map("n", "<leader>p", "<cmd>Telescope find_files<cr>")
   map("n", "<leader>F", "<cmd>Telescope live_grep<cr>")
 end
 
