@@ -138,8 +138,8 @@ nnoremap <Esc><Esc> <cmd>nohlsearch<CR>
 "" }}}
 
 " Easy escape {{{
-  inoremap jj <ESC>
-  inoremap j<Space> j
+  inoremap hh <ESC>
+  inoremap h<Space> h
 " }}}
 
 " Join the line {{{
