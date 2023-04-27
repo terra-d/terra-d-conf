@@ -157,9 +157,8 @@ nnoremap v p
 xnoremap v p
 nnoremap V P
 xnoremap V P
-let b:clipexe = '/mnt/c/Windows/System32/clip.exe'
 if b:is_wsl
-  vnoremap <RightMouse> y:call system(b:clipexe, @")<CR>
+  vnoremap <RightMouse> y:call system('/mnt/c/Windows/System32/clip.exe', @")<CR>
   " TODO
   " nnoremap <leader>c y:call system(b:clipexe, @")<CR>
   " xnoremap <leader>c y:call system(b:clipexe, @")<CR>
@@ -181,4 +180,5 @@ if b:is_vscode_neovim
 else
   nnoremap <C-w><C-w> <cmd>w<CR>
   nnoremap <C-q><C-q> <cmd>q<CR>
+  nnoremap <C-w><C-q> <cmd>wq<CR>
 endif
