@@ -1,6 +1,8 @@
 # installation
 sudo -E pacman -S --needed --noconfirm base-devel
 sudo -E pacman -S --needed --noconfirm bat
+sudo -E pacman -S --needed --noconfirm docker
+sudo -E pacman -S --needed --noconfirm docker-compose
 sudo -E pacman -S --needed --noconfirm fd
 sudo -E pacman -S --needed --noconfirm fish
 sudo -E pacman -S --needed --noconfirm fzf
