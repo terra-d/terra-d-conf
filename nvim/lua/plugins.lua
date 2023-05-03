@@ -49,7 +49,7 @@ return {
   {
     "m-demare/hlargs.nvim",
     enabled = not IS_VSCODE_NEOVIM,
-    depndencies = {
+    dependencies = {
       "nvim-treesitter/nvim-treesitter",
     },
     opts = {},
