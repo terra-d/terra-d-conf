@@ -30,7 +30,6 @@ local has_words_before = function()
 end
 
 function M.setup()
-  require("copilot_cmp").setup()
   cmp.setup({
     snippet = {
       expand = function(args)
@@ -60,7 +59,6 @@ function M.setup()
       end),
     }),
     sources = cmp.config.sources({
-      { name = "copilot" },
       { name = "luasnip" },
       { name = "nvim_lsp" },
       { name = "nvim_lsp_signature_help" },

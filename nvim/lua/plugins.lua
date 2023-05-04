@@ -231,7 +231,6 @@ return {
       "saadparwaiz1/cmp_luasnip",
       "windwp/nvim-autopairs",
       "zbirenbaum/copilot.lua",
-      "zbirenbaum/copilot-cmp",
     },
     config = function()
       require("plugin-settings.nvim-cmp").setup()
