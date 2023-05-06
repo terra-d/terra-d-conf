@@ -22,19 +22,19 @@ function M.setup()
     multi_revert = "<backspace>",
   }
 
-  map("n", "j", "<Plug>(leap-forward)")
-  map("x", "j", "<Plug>(leap-forward)")
-  map("o", "j", "<Plug>(leap-forward)")
-  map("n", "J", "<Plug>(leap-backward)")
-  map("x", "J", "<Plug>(leap-backward)")
-  map("o", "J", "<Plug>(leap-backward)")
+  map("n", "h", "<Plug>(leap-forward)")
+  map("x", "h", "<Plug>(leap-forward)")
+  map("o", "h", "<Plug>(leap-forward)")
+  map("n", "H", "<Plug>(leap-backward)")
+  map("x", "H", "<Plug>(leap-backward)")
+  map("o", "H", "<Plug>(leap-backward)")
   map("x", "x", "<Plug>(leap-forward-till)")
   map("o", "x", "<Plug>(leap-forward-till)")
   map("x", "X", "<Plug>(leap-backward-till)")
   map("o", "X", "<Plug>(leap-backward-till)")
-  map("n", "gj", "<Plug>(leap-from-window)")
-  map("x", "gj", "<Plug>(leap-from-window)")
-  map("o", "gj", "<Plug>(leap-from-window)")
+  map("n", "gh", "<Plug>(leap-from-window)")
+  map("x", "gh", "<Plug>(leap-from-window)")
+  map("o", "gh", "<Plug>(leap-from-window)")
 end
 
 return M
