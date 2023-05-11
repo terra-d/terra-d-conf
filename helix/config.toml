@@ -1,0 +1,39 @@
+theme = "nightfox"
+
+[keys.normal]
+# movement
+u = "move_line_up"
+e = "move_line_down"
+n = "move_char_left"
+i = "move_char_right"
+l = "move_prev_word_start"
+L = "move_prev_long_word_start"
+y = "move_next_word_start"
+Y = "move_next_long_word_start"
+o = "move_next_word_end"
+O = "move_next_long_word_end"
+C-l = "page_up"
+C-n = "page_down"
+
+# changes
+s = "insert_mode"
+S = "insert_at_line_start"
+t = "append_mode"
+T = "insert_at_line_end"
+p = "open_below"
+P = "open_above"
+z = "undo"
+Z = "redo"
+c = "yank"
+v = "paste_after"
+V = "paste_before"
+w = "change_selection"
+A-w = "change_selection_noyank"
+
+# selection manipulation
+x = "select_regex"
+X = "split_selection"
+A-x = "split_selection_on_newline"
+a = "extend_line_below"
+A = "extend_to_line_bounds"
+A-a = "shrink_to_line_bounds"
