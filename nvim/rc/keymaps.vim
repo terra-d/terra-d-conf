@@ -18,6 +18,9 @@ xnoremap <C-l> <C-b>
 nnoremap <C-n> <C-f>
 xnoremap <C-n> <C-f>
 
+" move the last line
+nnoremap ge G
+
 " Window handling
 if b:is_vscode_neovim
   nnoremap <C-w>u <Cmd>call VSCodeNotify('workbench.action.focusAboveGroup')<CR>
