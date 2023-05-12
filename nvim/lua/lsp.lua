@@ -32,7 +32,7 @@ function M.setup()
       map("n", "<space>R", vim.lsp.buf.rename, opts)
       map("n", "<space>.", vim.lsp.buf.code_action, opts)
       map("n", "<space>r", vim.lsp.buf.references, opts)
-      map("n", "<space>f", function()
+      map("n", "<leader>f", function()
         vim.lsp.buf.format({ async = true })
       end, opts)
     end,
