@@ -8,6 +8,7 @@ sudo -E pacman -S --needed --noconfirm fish
 sudo -E pacman -S --needed --noconfirm fzf
 sudo -E pacman -S --needed --noconfirm github-cli
 sudo -E pacman -S --needed --noconfirm helix
+sudo -E pacman -S --needed --noconfirm nushell
 sudo -E pacman -S --needed --noconfirm ripgreg
 sudo -E pacman -S --needed --noconfirm starship
 sudo -E pacman -S --needed --noconfirm tk
@@ -32,6 +33,10 @@ fish -c "set -Ux STARSHIP_CONFIG $HOME/terra-d-conf/starship.toml"
 fish -c "set -Ux RIPGREP_CONFIG_PATH $HOME/.config/.ripgreprc"
 fish -c "set -Ux PIPENV_VENV_IN_PROJECT 1"
 fish -c "fish_add_path $HOME/.local/share/rtx/bin"
+
+# nushell
+mkdir -p ~/.cache/starship
+nu -c "starship init nu | save -f ~/.cache/starship/init.nu"
 
 # rtx
 fish -c "rtx install awscli@2"
