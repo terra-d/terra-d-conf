@@ -9,7 +9,6 @@ sudo -E pacman -S --needed --noconfirm fish
 sudo -E pacman -S --needed --noconfirm fzf
 sudo -E pacman -S --needed --noconfirm github-cli
 sudo -E pacman -S --needed --noconfirm helix
-sudo -E pacman -S --needed --noconfirm httpie
 sudo -E pacman -S --needed --noconfirm nushell
 sudo -E pacman -S --needed --noconfirm ripgreg
 sudo -E pacman -S --needed --noconfirm starship
