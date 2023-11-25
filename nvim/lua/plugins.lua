@@ -58,10 +58,13 @@ return {
   {
     "lukas-reineke/indent-blankline.nvim",
     enabled = not IS_VSCODE_NEOVIM,
+    main = "ibl",
     dependencies = {
       "nvim-treesitter/nvim-treesitter",
     },
-    opts = require("plugin-settings.indent-blankline"),
+    config = function()
+      require("plugin-settings.indent-blankline").setup()
+    end,
   },
   -- Leap is a general-purpose motion plugin
   {

@@ -1,5 +1,7 @@
-return {
-   char = "┆",
-   show_current_context = true,
-   show_current_context_start = true,
-}
+local M = {}
+
+function M.setup()
+  require("ibl").setup()
+end
+
+return M
