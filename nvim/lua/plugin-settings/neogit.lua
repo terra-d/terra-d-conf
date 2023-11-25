@@ -1,14 +1,15 @@
 local M = {}
 local map = require("utils").map
+local neogit = require("neogit")
 
 function M.setup()
-  require("neogit").setup({
+  neogit.setup({
     mappings = {
       status = {
-        ["u"] = "",
-        ["U"] = "",
-        ["t"] = "Unstage",
-        ["T"] = "UnstageStaged",
+        ["o"] = "Unstage",
+        ["O"] = "UnstageStaged",
+        ["u"] = false,
+        ["U"] = false,
       },
     },
     integrations = {
