@@ -120,7 +120,7 @@ return {
     enabled = not IS_VSCODE_NEOVIM,
     dependencies = {
       "williamboman/mason.nvim",
-      "jose-elias-alvarez/null-ls.nvim",
+      "nvimtools/none-ls.nvim",
     },
     config = function()
       require("plugin-settings.mason-null-ls").setup()
