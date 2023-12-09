@@ -233,7 +233,6 @@ return {
       "ray-x/cmp-treesitter",
       "saadparwaiz1/cmp_luasnip",
       "windwp/nvim-autopairs",
-      "zbirenbaum/copilot.lua",
     },
     config = function()
       require("plugin-settings.nvim-cmp").setup()
@@ -241,21 +240,20 @@ return {
   },
   -- copilot
   {
-    "zbirenbaum/copilot.lua",
+    "github/copilot.vim",
     enabled = not IS_VSCODE_NEOVIM,
-    dependencies = {
-      "github/copilot.vim",
-    },
     config = function()
       require("plugin-settings.copilot").setup()
     end,
-  },
-  -- This repository transforms copilot into a cmp source.
-  {
-    "zbirenbaum/copilot-cmp",
-    enabled = not IS_VSCODE_NEOVIM,
-    dependencies = {
-      "zbirenbaum/copilot.lua",
-    },
-  },
+  }
+  -- {
+  --   "zbirenbaum/copilot.lua",
+  --   enabled = not IS_VSCODE_NEOVIM,
+  --   dependencies = {
+  --     "github/copilot.vim",
+  --   },
+  --   config = function()
+  --     require("plugin-settings.copilot").setup()
+  --   end,
+  -- },
 }

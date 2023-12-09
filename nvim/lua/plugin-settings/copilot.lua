@@ -1,11 +1,16 @@
 local M = {}
+local map = require("utils").map
+
 
 function M.setup()
-  require("copilot").setup({
-    suggestion = { enabled = false },
-    panel = { enabled = false },
-    node = "~/.local/share/rtx/installs/node/18/bin/node",
-  })
+  vim.g.copilot_assume_mapped = true
+
+  -- copilot.lua
+  -- require("copilot").setup({
+  --   suggestion = { enabled = true },
+  --   panel = { auto_trigger = true, enabled = true },
+  --   node = "~/.local/share/rtx/installs/node/18/bin/node",
+  -- })
 end
 
 return M
