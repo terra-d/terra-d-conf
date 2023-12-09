@@ -101,6 +101,17 @@ return {
       require("plugin-settings.mason").setup()
     end,
   },
+  -- Install or upgrade all of your third-party tools.
+  {
+    "WhoIsSethDaniel/mason-tool-installer.nvim",
+    enabled = not IS_VSCODE_NEOVIM,
+    dependencies = {
+      "williamboman/mason.nvim",
+    },
+    config = function()
+      require("plugin-settings.mason-tool-installer").setup()
+    end,
+  },
   {
     "williamboman/mason-lspconfig.nvim",
     enabled = not IS_VSCODE_NEOVIM,
