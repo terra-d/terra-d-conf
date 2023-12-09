@@ -18,6 +18,9 @@ xnoremap <C-l> <C-b>
 nnoremap <C-n> <C-f>
 xnoremap <C-n> <C-f>
 
+" scroll screen
+nnoremap <C-u> <C-y>
+
 " move the last line
 nnoremap ge G
 
@@ -96,11 +99,8 @@ xnoremap Z :<C-U>redo<CR>
 
 " Visual mode
 nnoremap a v
-xnoremap a v
 nnoremap A V
-xnoremap A V
 nnoremap <C-A> <C-V>
-xnoremap <C-A> <C-V>
 
 " Search
 nnoremap k n
