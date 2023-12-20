@@ -17,7 +17,7 @@ sudo -E pacman -S --needed --noconfirm wget
 sudo -E pacman -S --needed --noconfirm which
 sudo -E pacman -S --needed --noconfirm zip unzip
 
-curl https://rtx.pub/install.sh | sh
+curl https://rtx.jdx.dev/install.sh | sh
 
 git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 yay -S google-chrome
