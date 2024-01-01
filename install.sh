@@ -51,7 +51,6 @@ chsh -s /usr/bin/fish
 curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
 fisher update
 
-fish -c "set -Ux WEZTERM_CONFIG_FILE $HOME/.config/.wezterm.lua"
 fish -c "set -Ux STARSHIP_CONFIG $HOME/terra-d-conf/starship.toml"
 fish -c "set -Ux RIPGREP_CONFIG_PATH $HOME/.config/.ripgreprc"
 fish -c "set -Ux PIPENV_VENV_IN_PROJECT 1"
