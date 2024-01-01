@@ -175,7 +175,7 @@ return {
   {
     "nvim-telescope/telescope.nvim",
     enabled = not IS_VSCODE_NEOVIM,
-    tag = "0.1.1",
+    tag = "0.1.5",
     dependencies = {
       "kkharji/sqlite.lua",
       "nvim-lua/plenary.nvim",
@@ -256,7 +256,7 @@ return {
     config = function()
       require("plugin-settings.copilot").setup()
     end,
-  }
+  },
   -- {
   --   "zbirenbaum/copilot.lua",
   --   enabled = not IS_VSCODE_NEOVIM,
