@@ -55,6 +55,9 @@ fish -c "set -Ux STARSHIP_CONFIG $HOME/terra-d-conf/starship.toml"
 fish -c "set -Ux RIPGREP_CONFIG_PATH $HOME/.config/.ripgreprc"
 fish -c "set -Ux PIPENV_VENV_IN_PROJECT 1"
 fish -c "fish_add_path $HOME/.local/share/rtx/bin"
+if [ "$(uname)" == 'Darwin' ]; then
+  fish -c "fish_add_path /Applications/WezTerm.app/Contents/MacOS"
+fi
 
 # nushell
 mkdir -p ~/.cache/starship
