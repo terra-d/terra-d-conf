@@ -1,5 +1,5 @@
 local M = {}
-local map = require("utils").map
+local noremap = require("utils").noremap
 
 function M.setup()
     require("neo-tree").setup({
@@ -17,7 +17,7 @@ function M.setup()
         },
     })
 
-    map("n", "<leader>E", "<cmd>NeoTreeShow<CR>")
+    noremap("n", "<leader>E", "<cmd>NeoTreeShow<CR>")
 end
 
 return M

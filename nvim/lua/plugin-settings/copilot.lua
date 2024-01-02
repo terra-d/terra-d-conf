@@ -1,5 +1,5 @@
 local M = {}
-local map = require("utils").map
+local noremap = require("utils").noremap
 
 
 function M.setup()

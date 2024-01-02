@@ -1,5 +1,5 @@
 local M = {}
-local map = require("utils").map
+local noremap = require("utils").noremap
 local leap = require("leap")
 
 function M.setup()
@@ -22,19 +22,19 @@ function M.setup()
     multi_revert = "<backspace>",
   }
 
-  map("n", "h", "<Plug>(leap-forward)")
-  map("x", "h", "<Plug>(leap-forward)")
-  map("o", "h", "<Plug>(leap-forward)")
-  map("n", "H", "<Plug>(leap-backward)")
-  map("x", "H", "<Plug>(leap-backward)")
-  map("o", "H", "<Plug>(leap-backward)")
-  map("x", "x", "<Plug>(leap-forward-till)")
-  map("o", "x", "<Plug>(leap-forward-till)")
-  map("x", "X", "<Plug>(leap-backward-till)")
-  map("o", "X", "<Plug>(leap-backward-till)")
-  map("n", "gh", "<Plug>(leap-from-window)")
-  map("x", "gh", "<Plug>(leap-from-window)")
-  map("o", "gh", "<Plug>(leap-from-window)")
+  noremap("n", "h", "<Plug>(leap-forward)")
+  noremap("x", "h", "<Plug>(leap-forward)")
+  noremap("o", "h", "<Plug>(leap-forward)")
+  noremap("n", "H", "<Plug>(leap-backward)")
+  noremap("x", "H", "<Plug>(leap-backward)")
+  noremap("o", "H", "<Plug>(leap-backward)")
+  noremap("x", "x", "<Plug>(leap-forward-till)")
+  noremap("o", "x", "<Plug>(leap-forward-till)")
+  noremap("x", "X", "<Plug>(leap-backward-till)")
+  noremap("o", "X", "<Plug>(leap-backward-till)")
+  noremap("n", "gh", "<Plug>(leap-from-window)")
+  noremap("x", "gh", "<Plug>(leap-from-window)")
+  noremap("o", "gh", "<Plug>(leap-from-window)")
 end
 
 return M

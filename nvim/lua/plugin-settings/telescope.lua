@@ -1,5 +1,5 @@
 local M = {}
-local map = require("utils").map
+local noremap = require("utils").noremap
 local actions = require("telescope.actions")
 local telescope = require("telescope")
 
@@ -24,9 +24,9 @@ function M.setup()
 
   telescope.load_extension("frecency")
 
-  map("n", "<leader><leader>", "<cmd>Telescope frecency<cr>")
-  map("n", "<space>f", "<cmd>Telescope find_files<cr>")
-  map("n", "<leader>F", "<cmd>Telescope live_grep<cr>")
+  noremap("n", "<leader><leader>", "<cmd>Telescope frecency<cr>")
+  noremap("n", "<space>f", "<cmd>Telescope find_files<cr>")
+  noremap("n", "<leader>F", "<cmd>Telescope live_grep<cr>")
 end
 
 return M

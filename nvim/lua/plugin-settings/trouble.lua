@@ -1,5 +1,5 @@
 local M = {}
-local map = require("utils").map
+local noremap = require("utils").noremap
 
 function M.setup()
   require("trouble").setup({
@@ -15,12 +15,12 @@ function M.setup()
     },
   })
 
-  map("n", "<leader>xx", "<cmd>TroubleToggle<cr>")
-  map("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>")
-  map("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>")
-  map("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>")
-  map("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>")
-  map("n", "gR", "<cmd>TroubleToggle lsp_references<cr>")
+  noremap("n", "<leader>xx", "<cmd>TroubleToggle<cr>")
+  noremap("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>")
+  noremap("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>")
+  noremap("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>")
+  noremap("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>")
+  noremap("n", "gR", "<cmd>TroubleToggle lsp_references<cr>")
 end
 
 return M

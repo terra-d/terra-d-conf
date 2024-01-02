@@ -1,5 +1,5 @@
 local M = {}
-local map = require("utils").map
+local noremap = require("utils").noremap
 local neogit = require("neogit")
 
 function M.setup()
@@ -17,7 +17,7 @@ function M.setup()
     },
   })
 
-  map("n", "<leader>G", "<cmd>Neogit<CR>")
+  noremap("n", "<leader>G", "<cmd>Neogit<CR>")
 end
 
 return M
