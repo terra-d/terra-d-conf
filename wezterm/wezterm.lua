@@ -4,7 +4,7 @@ local is_darwin = wezterm.target_triple:find("darwin")
 local is_windows = wezterm.target_triple:find("windows")
 
 local config = {
-  color_scheme = "nordfox",
+  color_scheme = "Tokyo Night",
   font = wezterm.font("Cica", { weight = "Regular" }),
   font_size = 14.0,
   leader = { key = ",", mods = "CTRL", timeout_milliseconds = 3000 },
