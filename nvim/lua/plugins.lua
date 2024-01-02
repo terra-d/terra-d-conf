@@ -5,7 +5,7 @@ return {
     enabled = not IS_VSCODE_NEOVIM,
     lazy = false,
     config = function()
-      vim.cmd("colorscheme tokyonight-moon")
+      vim.cmd("colorscheme tokyonight-night")
     end,
   },
   -- A blazing fast and easy to configure Neovim statusline written in Lua.
@@ -64,6 +64,13 @@ return {
     },
     config = function()
       require("plugin-settings.indent-blankline").setup()
+    end,
+  },
+  --  Repeat.vim remaps . in a way that plugins can tap into it.
+  {
+    "tpope/vim-repeat",
+    config = function()
+      require("plugin-settings.vim-repeat").setup()
     end,
   },
   -- Leap is a general-purpose motion plugin
