@@ -1,11 +1,11 @@
 return {
   -- A highly customizable theme for vim and neovim
   {
-    "EdenEast/nightfox.nvim",
+    "folke/tokyonight.nvim",
     enabled = not IS_VSCODE_NEOVIM,
+    lazy = false,
     config = function()
-      require("nightfox").setup()
-      vim.cmd("colorscheme nordfox")
+      vim.cmd("colorscheme tokyonight-moon")
     end,
   },
   -- A blazing fast and easy to configure Neovim statusline written in Lua.
