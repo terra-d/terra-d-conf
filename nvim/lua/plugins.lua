@@ -256,6 +256,15 @@ return {
       require("plugin-settings.nvim-cmp").setup()
     end,
   },
+  -- terminal
+  {
+    "akinsho/toggleterm.nvim",
+    enabled = not IS_VSCODE_NEOVIM,
+    version = "*",
+    config = function()
+      require("plugin-settings.toggleterm").setup()
+    end,
+  },
   -- copilot
   {
     "github/copilot.vim",
