@@ -282,4 +282,17 @@ return {
   --     require("plugin-settings.copilot").setup()
   --   end,
   -- },
+  -- plantuml syntax highlight
+  {
+    "aklt/plantuml-syntax",
+    enabled = not IS_VSCODE_NEOVIM,
+  },
+  -- plantuml previewer
+  {
+    "skanehira/preview-uml.vim",
+    enabled = not IS_VSCODE_NEOVIM,
+    config = function()
+      require("plugin-settings.preview-uml").setup()
+    end,
+  },
 }
