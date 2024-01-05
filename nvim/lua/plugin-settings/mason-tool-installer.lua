@@ -2,15 +2,7 @@ local M = {}
 
 function M.setup()
   require("mason-tool-installer").setup({
-    ensure_installed = {
-      -- javascript, typescript
-      "eslint",
-      "prettier",
-
-      -- lua
-      "lua-language-server",
-      "stylua",
-    },
+    ensure_installed = require("lsp.packages"),
     auto_update = true,
     run_on_start = true,
   })
