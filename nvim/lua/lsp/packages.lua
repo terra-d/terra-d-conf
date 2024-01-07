@@ -9,8 +9,8 @@ return {
 
   -- lua
   "lua-language-server",
-  "stylua"
+  "stylua",
 
   -- sonarlint
-  "sonarlint",
+  "sonarlint-language-server",
 }
