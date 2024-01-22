@@ -3,6 +3,6 @@ if test (uname -s) = "Darwin"
 end
 
 starship init fish | source
-rtx activate fish | source
+~/.local/bin/mise activate fish | source
 
 alias hx='helix'
