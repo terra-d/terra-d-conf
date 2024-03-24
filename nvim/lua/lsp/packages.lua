@@ -11,6 +11,10 @@ return {
   "lua-language-server",
   "stylua",
 
+  -- markdown
+  "markdownlint",
+  "textlint",
+
   -- sonarlint
   "sonarlint-language-server",
 }
