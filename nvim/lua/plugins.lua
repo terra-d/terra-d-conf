@@ -66,19 +66,20 @@ return {
       require("plugin-settings.indent-blankline").setup()
     end,
   },
-  --  Repeat.vim remaps . in a way that plugins can tap into it.
-  {
-    "tpope/vim-repeat",
-    config = function()
-      require("plugin-settings.vim-repeat").setup()
-    end,
-  },
+  -- NOTE: This plugin is not working for me because of conflict with keybindings.
+  -- --  Repeat.vim remaps . in a way that plugins can tap into it.
+  -- {
+  --   "tpope/vim-repeat",
+  --   config = function()
+  --     require("plugin-settings.vim-repeat").setup()
+  --   end,
+  -- },
   -- Leap is a general-purpose motion plugin
   {
     "ggandor/leap.nvim",
-    dependencies = {
-      "tpope/vim-repeat",
-    },
+    -- dependencies = {
+    --   "tpope/vim-repeat",
+    -- },
     config = function()
       require("plugin-settings.leap").setup()
     end,
