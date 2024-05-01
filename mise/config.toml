@@ -1,0 +1,4 @@
+[tools]
+node = "20"
+python = "latest"
+rust = "latest"
