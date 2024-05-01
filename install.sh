@@ -63,15 +63,6 @@ mkdir -p ~/.cache/starship
 nu -c "starship init nu | save -f ~/.cache/starship/init.nu"
 
 # mise
-fish -c "mise install awscli@2"
-fish -c "mise global awscli@2"
-fish -c "mise install lua@5"
-fish -c "mise global lua@5"
-fish -c "mise install node@20"
-fish -c "mise global node@20"
-fish -c "mise install python@3.11"
-fish -c "mise global python@3.11"
-fish -c "mise install rust@1"
-fish -c "mise global rust@1"
+fish -c "mise install"
 
 echo "Please restart shell."
