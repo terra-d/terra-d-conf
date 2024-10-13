@@ -1,9 +1,11 @@
 local M = {}
 local noremap = require("utils").noremap
 
-
 function M.setup()
   vim.g.copilot_assume_mapped = true
+  vim.g.copilot_no_tab_map = true
+
+  noremap("i", "<C-I>", 'copilot#Accept("<CR>")', { expr = true })
 
   -- copilot.lua
   -- require("copilot").setup({

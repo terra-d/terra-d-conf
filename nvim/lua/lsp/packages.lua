@@ -1,4 +1,7 @@
 return {
+  -- c, cpp
+  "clangd",
+
   -- docker
   "dockerfile-language-server",
   "hadolint",
