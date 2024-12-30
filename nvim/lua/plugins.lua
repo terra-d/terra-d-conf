@@ -296,4 +296,13 @@ return {
       require("plugin-settings.preview-uml").setup()
     end,
   },
+  -- orgmode
+  {
+    "nvim-orgmode/orgmode",
+    event = "VeryLazy",
+    ft = { "org" },
+    config = function()
+      require("plugin-settings.orgmode").setup()
+    end,
+  },
 }

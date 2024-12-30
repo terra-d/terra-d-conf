@@ -38,6 +38,7 @@
   "nvim-treesitter-context": { "branch": "master", "commit": "2bcf700b59bc92850ca83a1c02e86ba832e0fae0" },
   "nvim-web-devicons": { "branch": "master", "commit": "4adeeaa7a32d46cf3b5833341358c797304f950a" },
   "nvim-yati": { "branch": "main", "commit": "df3dc06076c6fe20a1dcd8643e712af5c252d042" },
+  "orgmode": { "branch": "master", "commit": "bf657742f7cb56211f99946ff64f5f87d7d7f0d0" },
   "plantuml-syntax": { "branch": "master", "commit": "9d4900aa16674bf5bb8296a72b975317d573b547" },
   "plenary.nvim": { "branch": "master", "commit": "2d9b06177a975543726ce5c73fca176cedbffe9d" },
   "preview-uml.vim": { "branch": "master", "commit": "200105fe06c32d1478f1e822360ba4ccd33a4c70" },
