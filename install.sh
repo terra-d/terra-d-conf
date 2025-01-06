@@ -27,6 +27,8 @@ else
   sudo -E pacman -S --needed --noconfirm fish
   sudo -E pacman -S --needed --noconfirm fzf
   sudo -E pacman -S --needed --noconfirm github-cli
+  sudo -E pacman -S --needed --noconfirm lua51
+  sudo -E pacman -S --needed --noconfirm luarocks
   sudo -E pacman -S --needed --noconfirm helix
   sudo -E pacman -S --needed --noconfirm nushell
   sudo -E pacman -S --needed --noconfirm ripgreg

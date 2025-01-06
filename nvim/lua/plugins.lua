@@ -299,8 +299,10 @@ return {
   -- orgmode
   {
     "nvim-neorg/neorg",
-    lazy = false,
+    ft = "norg",
     version = "*",
-    config = true,
+    config = function()
+      require("plugin-settings.neorg").setup()
+    end,
   },
 }
