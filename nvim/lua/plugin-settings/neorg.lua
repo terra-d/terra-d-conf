@@ -1,4 +1,5 @@
 local M = {}
+local noremap = require("utils").noremap
 local neorg = require("neorg")
 
 function M.setup()
@@ -16,6 +17,8 @@ function M.setup()
       },
     },
   })
+
+  noremap("n", "<M-t>", "<Plug>(neorg.qol.todo-items.todo.task-cycle)")
 end
 
 return M

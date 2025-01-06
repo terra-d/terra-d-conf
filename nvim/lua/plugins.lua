@@ -299,6 +299,7 @@ return {
   -- orgmode
   {
     "nvim-neorg/neorg",
+    enabled = not IS_VSCODE_NEOVIM,
     ft = "norg",
     version = "*",
     config = function()
