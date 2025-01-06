@@ -298,11 +298,9 @@ return {
   },
   -- orgmode
   {
-    "nvim-orgmode/orgmode",
-    event = "VeryLazy",
-    ft = { "org" },
-    config = function()
-      require("plugin-settings.orgmode").setup()
-    end,
+    "nvim-neorg/neorg",
+    lazy = false,
+    version = "*",
+    config = true,
   },
 }
