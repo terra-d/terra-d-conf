@@ -1,4 +1,5 @@
 let g:mapleader = ","
+let maplocalleader = "\<Space>"
 let b:is_vscode_neovim = exists('g:vscode')
 let b:is_wsl = system('uname -r') =~? 'microsoft'
 

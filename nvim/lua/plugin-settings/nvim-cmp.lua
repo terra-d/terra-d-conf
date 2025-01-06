@@ -60,6 +60,7 @@ function M.setup()
     }),
     sources = cmp.config.sources({
       { name = "luasnip" },
+      { name = "neorg" },
       { name = "nvim_lsp" },
       { name = "nvim_lsp_signature_help" },
       { name = "nvim_lua" },
