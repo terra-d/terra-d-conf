@@ -298,12 +298,11 @@ return {
   },
   -- orgmode
   {
-    "nvim-neorg/neorg",
-    enabled = not IS_VSCODE_NEOVIM,
-    ft = "norg",
-    version = "*",
+    "nvim-orgmode/orgmode",
+    event = "VeryLazy",
+    ft = { "org" },
     config = function()
-      require("plugin-settings.neorg").setup()
+      require("plugin-settings.orgmode").setup()
     end,
   },
 }
