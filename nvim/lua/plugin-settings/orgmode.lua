@@ -12,6 +12,7 @@ function M.setup()
       DELEGATED = ":background #FFFFFF :slant italic :underline on",
       DEFERRED = ":background #000000 :foreground red", -- overrides builtin color for `TODO` keyword
     },
+    org_archive_location = "~/orgfiles/archive/%s_archive::",
   })
 end
 
