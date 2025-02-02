@@ -13,6 +13,7 @@ function M.setup()
       DEFERRED = ":background #000000 :foreground red", -- overrides builtin color for `TODO` keyword
     },
     org_archive_location = "~/orgfiles/archive/%s_archive::",
+    calendar_week_start_day = 0,
   })
 end
 
