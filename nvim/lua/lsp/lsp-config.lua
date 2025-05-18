@@ -2,6 +2,32 @@ local M = {}
 local noremap = require("utils").noremap
 
 function M.setup()
+  vim.lsp.config["lua_ls"] = {
+    filetypes = { "lua" },
+    root_markers = {
+      ".luarc.json",
+      ".luarc.jsonc",
+      ".luacheckrc",
+      ".stylua.toml",
+      "stylua.toml",
+      "selene.toml",
+      "selene.yml",
+      ".git",
+    },
+    settings = {
+      Lua = {
+        runtime = {
+          version = "LuaJIT",
+          pathStrict = true,
+          path = { "?.lua", "?/init.lua" },
+        },
+        diagnostics = {
+          globals = { "vim" },
+        },
+      },
+    },
+  }
+
   noremap("n", "<space>n", vim.diagnostic.open_float)
   noremap("n", "<space>[", vim.diagnostic.goto_prev)
   noremap("n", "<space>]", vim.diagnostic.goto_next)
