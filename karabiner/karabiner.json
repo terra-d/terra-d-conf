@@ -20,7 +20,10 @@
                 }
             ],
             "name": "Default profile",
-            "virtual_hid_keyboard": { "country_code": 45 }
+            "virtual_hid_keyboard": {
+                "country_code": 45,
+                "keyboard_type_v2": "ansi"
+            }
         },
         {
             "complex_modifications": {
@@ -1870,13 +1873,24 @@
                             },
                             {
                                 "from": { "key_code": "caps_lock" },
-                                "to": [{ "key_code": "delete_or_backspace" }],
+                                "to": [{ "key_code": "right_control" }],
                                 "type": "basic"
                             }
                         ]
                     }
                 ]
             },
+            "devices": [
+                {
+                    "disable_built_in_keyboard_if_exists": true,
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "product_id": 2288,
+                        "vendor_id": 13364
+                    },
+                    "ignore": true
+                }
+            ],
             "name": "Internal KB",
             "selected": true,
             "simple_modifications": [
@@ -1885,7 +1899,10 @@
                     "to": [{ "key_code": "grave_accent_and_tilde" }]
                 }
             ],
-            "virtual_hid_keyboard": { "country_code": 45 }
+            "virtual_hid_keyboard": {
+                "country_code": 45,
+                "keyboard_type_v2": "ansi"
+            }
         }
     ]
 }
