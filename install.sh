@@ -57,7 +57,8 @@ elif [ "$(cat /etc/os-release | grep '^ID=' | cut -d'=' -f2)" == 'ubuntu' ]; the
 
   sudo mkdir -p /opt/nvim
   curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage
-  mv nvim-linux-x86_64.appimage /opt/nvim/nvim.appimage
+  chmod u+x nvim-linux-x86_64.appimage
+  sudo mv nvim-linux-x86_64.appimage /opt/nvim/nvim.appimage
   sudo ln -sf /opt/nvim/nvim.appimage /usr/local/bin/nvim
 
   sudo apt-get install ca-certificates curl
