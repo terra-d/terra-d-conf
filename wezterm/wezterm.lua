@@ -23,7 +23,7 @@ local config = {
 }
 
 if is_windows then
-  config.default_domain = "WSL:Arch"
+  config.default_domain = "WSL:Ubuntu"
   config.default_prog = { "wsl.exe" }
 
   local wsl_domains = wezterm.default_wsl_domains()
