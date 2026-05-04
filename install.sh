@@ -69,8 +69,14 @@ elif [ "$(cat /etc/os-release | grep '^ID=' | cut -d'=' -f2)" == 'ubuntu' ]; the
   sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
   
   sudo systemctl start docker
-  
-  curl https://mise.run | sh
+
+  sudo apt update -y && sudo apt install -y curl
+  sudo install -dm 755 /etc/apt/keyrings
+  curl -fSs https://mise.en.dev/gpg-key.pub | sudo tee /etc/apt/keyrings/mise-archive-keyring.asc 1> /dev/null
+  echo "deb [signed-by=/etc/apt/keyrings/mise-archive-keyring.asc] https://mise.en.dev/deb stable main" | sudo tee /etc/apt/sources.list.d/mise.list
+  sudo apt update -y
+  sudo apt install -y mise  
+
   curl -sS https://starship.rs/install.sh | sh
 fi
 
