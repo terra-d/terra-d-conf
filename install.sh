@@ -87,13 +87,13 @@ echo `(which chsh)` | sudo tee -a /etc/shells
 chsh -s /usr/bin/fish
 
 # fisher
-curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
-fisher update
+fish -c 'curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher'
+fish -c "fisher update"
 
 fish -c "set -Ux RIPGREP_CONFIG_PATH $HOME/.config/.ripgreprc"
 fish -c "set -Ux PIPENV_VENV_IN_PROJECT 1"
 fish -c "fish_add_path $HOME/.local/share/mise/bin"
-fish -c "set -Ux GH_BROWSER '/mnt/c/Program Files/Google/Chrome/Application/chrome.exe'"
+fish -c "set -Ux GH_BROWSER \"/mnt/c/Program Files/Google/Chrome/Application/chrome.exe\""
 if [ "$(uname)" == 'Darwin' ]; then
   fish -c "fish_add_path /Applications/WezTerm.app/Contents/MacOS"
 fi
