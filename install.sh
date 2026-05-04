@@ -52,7 +52,6 @@ elif [ "$(cat /etc/os-release | grep '^ID=' | cut -d'=' -f2)" == 'ubuntu' ]; the
   sudo apt install -y fzf
   sudo apt install -y gh
   sudo apt install -y ripgrep
-  sudo apt install -y starship
   sudo apt install -y zip unzip
   
   sudo apt-get install ca-certificates curl
