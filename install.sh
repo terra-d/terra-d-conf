@@ -45,6 +45,7 @@ elif [ "$(cat /etc/os-release | grep '^ID=' | cut -d'=' -f2)" == 'arch' ]; then
 elif [ "$(cat /etc/os-release | grep '^ID=' | cut -d'=' -f2)" == 'ubuntu' ]; then
   sudo apt update
   sudo apt upgrade -y
+
   sudo apt install -y build-essential
   sudo apt install -y bat
   sudo apt install -y fd-find
@@ -53,7 +54,12 @@ elif [ "$(cat /etc/os-release | grep '^ID=' | cut -d'=' -f2)" == 'ubuntu' ]; the
   sudo apt install -y gh
   sudo apt install -y ripgrep
   sudo apt install -y zip unzip
-  
+
+  sudo mkdir -p /opt/nvim
+  curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage
+  mv nvim-linux-x86_64.appimage /opt/nvim/nvim.appimage
+  sudo ln -sf /opt/nvim/nvim.appimage /usr/local/bin/nvim
+
   sudo apt-get install ca-certificates curl
   sudo install -m 0755 -d /etc/apt/keyrings
   sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
@@ -102,7 +108,7 @@ fi
 mkdir -p ~/.cache/starship
 nu -c "starship init nu | save -f ~/.cache/starship/init.nu"
 
-# mise
+ mise
 fish -c "mise install"
 
 echo "Please restart shell."
