@@ -5,5 +5,3 @@ else
 end
 
 starship init fish | source
-
-alias hx='helix'

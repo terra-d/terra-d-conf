@@ -61,6 +61,12 @@ elif [ "$(cat /etc/os-release | grep '^ID=' | cut -d'=' -f2)" == 'ubuntu' ]; the
   sudo mv nvim-linux-x86_64.appimage /opt/nvim/nvim.appimage
   sudo ln -sf /opt/nvim/nvim.appimage /usr/local/bin/nvim
 
+  sudo mkdir -p /opt/helix
+  curl -LO https://github.com/helix-editor/helix/releases/latest/download/helix-25.07.1-x86_64.AppImage
+  chmod u+x helix-25.07.1-x86_64.AppImage
+  sudo mv helix-25.07.1-x86_64.AppImage /opt/helix/helix.appimage
+  sudo ln -sf /opt/helix/helix.appimage /usr/local/bin/hx
+
   sudo apt-get install ca-certificates curl
   sudo install -m 0755 -d /etc/apt/keyrings
   sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
