@@ -55,19 +55,6 @@ elif [ "$(cat /etc/os-release | grep '^ID=' | cut -d'=' -f2)" == 'ubuntu' ]; the
   sudo apt install -y ripgrep
   sudo apt install -y zip unzip
 
-  sudo mkdir -p /opt/nvim
-  curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage
-  chmod u+x nvim-linux-x86_64.appimage
-  sudo mv nvim-linux-x86_64.appimage /opt/nvim/nvim.appimage
-  sudo ln -sf /opt/nvim/nvim.appimage /usr/local/bin/nvim
-
-  sudo mkdir -p /opt/helix
-  curl -LO https://github.com/helix-editor/helix/releases/latest/download/helix-25.07.1-x86_64.AppImage
-  chmod u+x helix-25.07.1-x86_64.AppImage
-  sudo mv helix-25.07.1-x86_64.AppImage /opt/helix/helix.appimage
-  sudo ln -sf /opt/helix/helix.appimage /usr/local/bin/hx
-
-  sudo apt-get install ca-certificates curl
   sudo install -m 0755 -d /etc/apt/keyrings
   sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
   sudo chmod a+r /etc/apt/keyrings/docker.asc
@@ -82,7 +69,6 @@ elif [ "$(cat /etc/os-release | grep '^ID=' | cut -d'=' -f2)" == 'ubuntu' ]; the
   
   sudo systemctl start docker
 
-  sudo apt update -y && sudo apt install -y curl
   sudo install -dm 755 /etc/apt/keyrings
   curl -fSs https://mise.en.dev/gpg-key.pub | sudo tee /etc/apt/keyrings/mise-archive-keyring.asc 1> /dev/null
   echo "deb [signed-by=/etc/apt/keyrings/mise-archive-keyring.asc] https://mise.en.dev/deb stable main" | sudo tee /etc/apt/sources.list.d/mise.list
@@ -94,10 +80,23 @@ fi
 
 export GH_BROWSER="'/mnt/c/Program Files/Google/Chrome/Application/chrome.exe'"
 
+# scripts
+mkdir -p "$HOME/.local/bin"
+
+for f in scripts/*.bash; do
+    name=$(basename "$f" .bash)
+    
+    chmod +x "$f"
+    
+    ln -sf "$(realpath "$f")" "$HOME/.local/bin/$name"
+    
+    echo "Linked: $name -> $f"
+done
 
 # fish
 echo `(which chsh)` | sudo tee -a /etc/shells
 chsh -s /usr/bin/fish
+fish -c 'fish_add_path "$HOME/.local/bin"'
 
 # fisher
 fish -c 'curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher'
@@ -115,7 +114,7 @@ fi
 mkdir -p ~/.cache/starship
 nu -c "starship init nu | save -f ~/.cache/starship/init.nu"
 
- mise
+mise
 fish -c "mise install"
 
 echo "Please restart shell."

@@ -42,8 +42,15 @@ A-w = "change_selection_noyank"
 # A = "extend_to_line_bounds"
 # A-a = "shrink_to_line_bounds"
 
+# search
+k = "search_next"
+K = "search_prev"
+
 # minor modes
-a = "select_mode"
+b = "select_mode"
+
+# custom
+C-y = ":sh zellij run -fc -- yy"
 
 [keys.select]
 u = "extend_visual_line_up"
@@ -57,3 +64,5 @@ Y = "extend_next_long_word_start"
 o = "extend_next_word_end"
 O = "extend_next_long_word_end"
 a = "normal_mode"
+
+c = "yank"
