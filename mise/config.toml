@@ -1,0 +1,16 @@
+[tools]
+aws-cli = { version = "latest", symlink_bins = "true" }
+cargo-binstall = "latest"
+go = "latest"
+"go:github.com/chrishrb/go-grip" = "latest"
+"go:github.com/mattn/efm-langserver" = "latest"
+helix = "latest"
+lazygit = "latest"
+markdownlint-cli2 = "latest"
+neovim = "latest"
+node = "lts"
+"npm:@openai/codex" = "latest"
+"npm:dprint" = "latest"
+rust = "latest"
+yazi = "latest"
+zellij = "latest"
