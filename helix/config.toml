@@ -4,8 +4,8 @@ theme = "nightfox"
 auto-format = true
 
 [editor.clipboard-provider.custom]
-yank = { command = "clip.exe" }
-paste = { command = "powershell.exe", args = ["-NoProfile", "-Command", "Get-Clipboard"] }
+yank = { command = "powershell.exe", args = ["-NoProfile", "-Command", "Get-Clipboard"] }
+paste = { command = "win-clip", args = [] }
 
 [keys.normal]
 # movement
