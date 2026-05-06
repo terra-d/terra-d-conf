@@ -38,8 +38,8 @@ Z = "redo"
 c = "yank"
 v = "paste_after"
 V = "paste_before"
-w = "change_selection"
-A-w = "change_selection_noyank"
+a = "change_selection"
+A-a = "change_selection_noyank"
 
 # selection manipulation
 # x = "select_regex"
