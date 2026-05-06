@@ -406,7 +406,7 @@ default_mode "normal"
 // copy_command "pbcopy"                     // osx
 // 
 // copy_command "pbcopy"
-   copy_command "clip.exe"
+   copy_command "win-clip"
  
 // Choose the destination for copied text
 // Allows using the primary selection buffer (on x11/wayland) instead of the system clipboard.
