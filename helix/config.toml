@@ -1,5 +1,15 @@
 theme = "nightfox"
 
+[editor]
+clipboard-provider = "custom"
+
+[editor.clipboard-provider.custom.yank]
+command = "clip.exe"
+
+[editor.clipboard-provider.custom.paste]
+command = "powershell.exe"
+args = ["-NoProfile", "-Command", "Get-Clipboard"]
+
 [keys.normal]
 # movement
 u = "move_line_up"
