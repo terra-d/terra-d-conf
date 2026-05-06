@@ -1,14 +1,11 @@
 theme = "nightfox"
 
 [editor]
-clipboard-provider = "custom"
+auto-format = true
 
-[editor.clipboard-provider.custom.yank]
-command = "clip.exe"
-
-[editor.clipboard-provider.custom.paste]
-command = "powershell.exe"
-args = ["-NoProfile", "-Command", "Get-Clipboard"]
+[editor.clipboard-provider.custom]
+yank = { command = "clip.exe" }
+paste = { command = "powershell.exe", args = ["-NoProfile", "-Command", "Get-Clipboard"] }
 
 [keys.normal]
 # movement
@@ -61,6 +58,7 @@ b = "select_mode"
 
 # custom
 C-y = ":sh zellij run -fc -- yy"
+C-p = ":sh hx-markdown-preview \"%{buffer_name}\""
 
 [keys.select]
 u = "extend_visual_line_up"
@@ -76,3 +74,4 @@ O = "extend_next_long_word_end"
 a = "normal_mode"
 
 c = "yank"
+

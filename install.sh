@@ -44,6 +44,7 @@ elif [ "$(cat /etc/os-release | grep '^ID=' | cut -d'=' -f2)" == 'arch' ]; then
   yay -S google-chrome
 elif [ "$(cat /etc/os-release | grep '^ID=' | cut -d'=' -f2)" == 'ubuntu' ]; then
   sudo apt update
+  sudo apt-add-repository ppa:fish-shell/release-4 -y
   sudo apt upgrade -y
 
   sudo apt install -y build-essential
