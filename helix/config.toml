@@ -39,6 +39,7 @@ c = "yank"
 v = "paste_after"
 V = "paste_before"
 a = "change_selection"
+A = ["select_mode", "goto_line_end", "change_selection"]
 A-a = "change_selection_noyank"
 
 # selection manipulation
