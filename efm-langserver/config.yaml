@@ -1,0 +1,32 @@
+version: 2
+
+root-markers:
+  - .git/
+  - .markdownlint.yml
+  - .markdownlint.yaml
+  - .markdownlint.json
+  - .markdownlint.jsonc
+  - .markdownlint-cli2.jsonc
+  - .markdownlint-cli2.yaml
+  - .markdownlint-cli2.yml
+  - .markdownlint-cli2.cjs
+  - .markdownlint-cli2.js
+
+lint-debounce: 1s
+
+tools:
+  markdownlint-cli2: &markdownlint-cli2
+    lint-command: markdownlint-cli2 "${INPUT}"
+    lint-stdin: false
+    lint-ignore-exit-code: true
+    lint-formats:
+      - "%f:%l:%c %m"
+      - "%f:%l %m"
+      - "%f: %l: %m"
+      - "%f:%l error %m"
+      - "%f:%l warning %m"
+      
+
+languages:
+  markdown:
+    - <<: *markdownlint-cli2
