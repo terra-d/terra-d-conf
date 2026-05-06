@@ -4,5 +4,6 @@ command = "efm-langserver"
 [[language]]
 name = "markdown"
 language-servers = ["efm","markdown-oxide"]
-formatter = { command = "dprint", args = ["fmt", "--stdin", "md"] }
+formatter = { command = "prettier", args = ["--parser", "markdown"] }
+auto-format = true
 
