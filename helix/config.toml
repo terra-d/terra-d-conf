@@ -43,6 +43,8 @@ A = ["select_mode", "goto_line_end", "change_selection"]
 A-a = "change_selection_noyank"
 
 # selection manipulation
+E = "join_selections"
+A-E = "join_selections_space"
 # x = "select_regex"
 # X = "split_selection"
 # A-x = "split_selection_on_newline"
