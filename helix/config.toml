@@ -2,6 +2,7 @@ theme = "nightfox"
 
 [editor]
 auto-format = true
+line-number = "relative"
 
 [editor.clipboard-provider.custom]
 yank = { command = "powershell.exe", args = ["-NoProfile", "-Command", "Get-Clipboard"] }

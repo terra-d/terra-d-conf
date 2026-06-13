@@ -17,6 +17,7 @@ if [ "$(uname)" == 'Darwin' ]; then
   brew install nushell
   brew install ripgreg
   brew install starship
+  brew install herdr
 elif [ "$(cat /etc/os-release | grep '^ID=' | cut -d'=' -f2)" == 'arch' ]; then
   sudo -E pacman -Syu
   sudo -E pacman -S --needed --noconfirm base-devel
@@ -77,6 +78,7 @@ elif [ "$(cat /etc/os-release | grep '^ID=' | cut -d'=' -f2)" == 'ubuntu' ]; the
   sudo apt install -y mise  
 
   curl -sS https://starship.rs/install.sh | sh
+  curl -fsSL https://herdr.dev/install.sh | sh
 fi
 
 export GH_BROWSER="'/mnt/c/Program Files/Google/Chrome/Application/chrome.exe'"

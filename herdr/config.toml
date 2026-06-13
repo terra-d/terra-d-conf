@@ -1,0 +1,9 @@
+[keys]
+focus_pane_left = "prefix+n"
+focus_pane_down = "prefix+e"
+focus_pane_up = "prefix+u"
+focus_pane_right = "prefix+i"
+
+split_vertical = "prefix+v"
+split_horizontal = "prefix+s"
+
