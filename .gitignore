@@ -1,10 +1,12 @@
 *.bak*
+*.log
 
 gh/
 gh-copilot/
 github-copilot/
 go/
 google-chrome/
+herdr/session.json
 jgit/
 karabiner/automatic_backups/
 mimeapps.list
