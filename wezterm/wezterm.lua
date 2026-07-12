@@ -20,6 +20,7 @@ local config = {
       action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
     },
   },
+  notification_handling = "AlwaysShow",
 }
 
 if is_windows then

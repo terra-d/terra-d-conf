@@ -1,9 +1,78 @@
+[language-server.vscode-eslint-language-server]
+command = "vscode-eslint-language-server"
+args = ["--stdio"]
+
+[language-server.vscode-eslint-language-server.config]
+validate = "on"
+run = "onType"
+nodePath = ""
+problems = { shortenToSingleLine = false }
+experimental = { useFlatConfig = true }
+
+[language-server.vscode-eslint-language-server.config.workingDirectory]
+mode = "location"
+
 [language-server.efm]
 command = "efm-langserver"
+
+[language-server.gopls]
+command = "gopls"
+
+[language-server.gopls.config]
+gofumpt = true
+staticcheck = true
+
+[language-server.gopls.config.analyses]
+unusedparams = true
+unreachable = true
+nilness = true
+shadow = true
+
+[[language]]
+name = "go"
+auto-format = true
+formatter = { command = "goimports" }
+language-servers = ["gopls"]
+
+[[language]]
+name = "javascript"
+language-servers = [
+  "typescript-language-server",
+  "vscode-eslint-language-server",
+]
+formatter = { command = "npm", args = ["exec", "--", "prettier", "--stdin-filepath", "%{buffer_name}"] }
+auto-format = true
 
 [[language]]
 name = "markdown"
 language-servers = ["efm","markdown-oxide"]
 formatter = { command = "prettier", args = ["--parser", "markdown"] }
+auto-format = true
+
+[[language]]
+name = "typescript"
+language-servers = [
+  "typescript-language-server",
+  "vscode-eslint-language-server",
+]
+formatter = { command = "npm", args = ["exec", "--", "prettier", "--stdin-filepath", "%{buffer_name}"] }
+auto-format = true
+
+[[language]]
+name = "jsx"
+language-servers = [
+  "typescript-language-server",
+  "vscode-eslint-language-server",
+]
+formatter = { command = "npm", args = ["exec", "--", "prettier", "--stdin-filepath", "%{buffer_name}"] }
+auto-format = true
+
+[[language]]
+name = "tsx"
+language-servers = [
+  "typescript-language-server",
+  "vscode-eslint-language-server",
+]
+formatter = { command = "npm", args = ["exec", "--", "prettier", "--stdin-filepath", "%{buffer_name}"] }
 auto-format = true
 

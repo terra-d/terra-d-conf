@@ -1,9 +1,24 @@
+onboarding = false
+
+[ui.toast]
+delivery = "terminal"
+delay_seconds = 2
+
+[ui.sound]
+enabled = true
+
 [keys]
 focus_pane_left = "prefix+n"
 focus_pane_down = "prefix+e"
 focus_pane_up = "prefix+u"
 focus_pane_right = "prefix+i"
 
+next_tab = "prefix+o"
+previous_tab = "prefix+h"
+
 split_vertical = "prefix+v"
 split_horizontal = "prefix+s"
 
+open_notification_target = "prefix+shift+o"
+edit_scrollback = "prefix+shift+e"
+settings = "prefix+,"

@@ -1,7 +1,7 @@
-if test (uname -s) = "Darwin"
-  eval "$(/opt/homebrew/bin/brew shellenv)"
+if test (uname -s) = Darwin
+    eval "$(/opt/homebrew/bin/brew shellenv)"
 else
-  mise activate fish | source
+    ~/.local/bin/mise activate fish | source
 end
 
 starship init fish | source

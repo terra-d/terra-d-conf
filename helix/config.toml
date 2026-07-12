@@ -8,6 +8,13 @@ line-number = "relative"
 yank = { command = "powershell.exe", args = ["-NoProfile", "-Command", "Get-Clipboard"] }
 paste = { command = "win-clip", args = [] }
 
+[editor.file-picker]
+parents = true
+ignore = true
+git-ignore = true
+git-global = true
+git-exclude = true
+
 [keys.normal]
 # movement
 u = "move_line_up"
