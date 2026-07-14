@@ -5,7 +5,7 @@ delivery = "terminal"
 delay_seconds = 2
 
 [ui.sound]
-enabled = true
+enabled = false
 
 [keys]
 focus_pane_left = "prefix+n"
