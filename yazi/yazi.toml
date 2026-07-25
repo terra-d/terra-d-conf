@@ -5,5 +5,5 @@ helix = [
 
 [open]
 rules = [
-  { name = "**/*", use = "helix" },
+  { url = "*", use = "hx" },
 ]
