@@ -12,3 +12,10 @@ karabiner/automatic_backups/
 mimeapps.list
 nushell/history.txt
 yay/
+
+# fish
+fish/conf.d/*local*.fish
+fish/conf.d/*secret*.fish
+fish/conf.d/fish_frozen_key_bindings.fish
+fish/conf.d/fish_frozen_theme.fish
+fish/fish_variables
