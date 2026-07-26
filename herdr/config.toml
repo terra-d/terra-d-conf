@@ -22,3 +22,6 @@ split_horizontal = "prefix+s"
 open_notification_target = "prefix+shift+o"
 edit_scrollback = "prefix+shift+e"
 settings = "prefix+,"
+
+[ui]
+agent_panel_sort = "priority"
