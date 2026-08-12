@@ -2,7 +2,11 @@ theme = "nightfox"
 
 [editor]
 auto-format = true
+bufferline = "always"
 line-number = "relative"
+
+[editor.soft-wrap]
+enable = true
 
 [editor.clipboard-provider.custom]
 yank = { command = "powershell.exe", args = ["-NoProfile", "-Command", "Get-Clipboard"] }
@@ -85,4 +89,3 @@ O = "extend_next_long_word_end"
 a = "normal_mode"
 
 c = "yank"
-
