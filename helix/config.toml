@@ -14,10 +14,6 @@ cursor-line = "disable"
 [editor.soft-wrap]
 enable = true
 
-[editor.clipboard-provider.custom]
-yank = { command = "powershell.exe", args = ["-NoProfile", "-Command", "Get-Clipboard"] }
-paste = { command = "win-clip", args = [] }
-
 [editor.file-picker]
 parents = true
 ignore = true
