@@ -1,3 +1,7 @@
+[language-server.rumdl]
+command = "rumdl"
+args = ["server"]
+
 [language-server.vscode-eslint-language-server]
 command = "vscode-eslint-language-server"
 args = ["--stdio"]
@@ -45,8 +49,21 @@ auto-format = true
 
 [[language]]
 name = "markdown"
-language-servers = ["efm","markdown-oxide"]
-formatter = { command = "prettier", args = ["--parser", "markdown"] }
+language-servers = [
+  "marksman",
+  "rumdl",
+]
+text-width = 120
+soft-wrap = { enable = true, wrap-at-text-width = false, wrap-indicator = "" }
+comment-tokens = [
+  "-",
+  "+",
+  "*",
+  "1.",
+  ">",
+  "- [ ]",
+]
+formatter = { command = "rumdl", args = ["fmt", "--silent", "-"] }
 auto-format = true
 
 [[language]]
@@ -75,4 +92,3 @@ language-servers = [
 ]
 formatter = { command = "npm", args = ["exec", "--", "prettier", "--stdin-filepath", "%{buffer_name}"] }
 auto-format = true
-

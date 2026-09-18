@@ -4,6 +4,12 @@ theme = "nightfox"
 auto-format = true
 bufferline = "always"
 line-number = "relative"
+text-width = 120
+continue-comments = true
+end-of-line-diagnostics = "disable"
+
+[editor.inline-diagnostics]
+cursor-line = "disable"
 
 [editor.soft-wrap]
 enable = true
